@@ -70,19 +70,16 @@ const FooterComps = () => {
           </h3>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <a href="/">Utama</a>
             </li>
             <li>
-              <a href="/About">About</a>
+              <a href="#About">About</a>
             </li>
             <li>
-              <a href="/ExpertTeam">Team</a>
+              <a href="/Faq">FAQ</a>
             </li>
             <li>
-              <a href="/NewsletterPage">Newsletter</a>
-            </li>
-            <li>
-              <a href="/GalleryPhoto">Gallery</a>
+              <a href="/Contact">Kontak</a>
             </li>
           </ul>
         </div>
