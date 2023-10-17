@@ -1,0 +1,56 @@
+.garis-bawah::after {
+  position: absolute;
+  content: "";
+  background: #8a7fff;
+  height: 4px;
+  width: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 4rem;
+}
+
+.cards {
+  width: 80rem;
+  border: #a9a9a9 1px solid;
+  margin-top: 80px;
+  margin-bottom: 200px;
+  border-radius: 10px;
+}
+
+.cards .card-header {
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #8a7fff;
+}
+
+.cards h3 {
+  font-size: 23px;
+  margin: 20px;
+}
+
+.cards .card-text {
+  font-size: 18px;
+  padding: 10px;
+  margin: 10px;
+}
+
+@media (max-width: 426px) {
+  .cards {
+    width: 85%;
+    margin-top: auto;
+  }
+  .card-header {
+    font-size: 30px !important;
+  }
+  .garis-bawah::after {
+    position: absolute;
+    content: "";
+    background: #8a7fff;
+    height: 4px;
+    width: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2.5rem;
+  }
+}

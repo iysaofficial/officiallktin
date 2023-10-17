@@ -1,0 +1,27 @@
+.card    {
+    width: 80rem;
+    
+    margin-top: 250px;
+    margin-bottom: 200px;
+}
+
+.card .card-header{
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #8a7fff;
+}
+
+.card .card-text{
+    font-size: 20px;
+}
+
+@media (max-width:426px) {
+    .card{
+        width: 85%;
+        margin-top: 120px;
+    }
+    .card-header{
+        font-size: 30px !important;
+    }
+}
