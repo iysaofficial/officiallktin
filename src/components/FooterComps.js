@@ -19,7 +19,7 @@ const FooterComps = () => {
       <div className="rowFooter">
         <div className="colFooter">
           <img
-            src="./assets/logo/iif2.WebP"
+            src="./assets/logo/iif2.png"
             alt="Footer Logo"
             className="logoFooter"
           ></img>

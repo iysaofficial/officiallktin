@@ -8,7 +8,7 @@ const ContactComps = () => {
           <div class="container">
             <div class="contact-box">
               <div class="box">
-                <h1>Contact Us</h1>
+                <h1>Kontak Kami</h1>
                 <div class="form-contact">
                   <form action="https://formspree.io/f/xqkvlend" method="POST">
                     <table>
@@ -17,7 +17,7 @@ const ContactComps = () => {
                           <input
                             type="text"
                             name="First Name"
-                            placeholder="First Name"
+                            placeholder="Nama Depan"
                             required
                             autocomplete="off"
                           />
@@ -26,7 +26,7 @@ const ContactComps = () => {
                           <input
                             type="text"
                             name="Lash Name"
-                            placeholder="Last Name"
+                            placeholder="Nama Belakang"
                             autocomplete="off"
                           />
                         </td>
@@ -36,7 +36,7 @@ const ContactComps = () => {
                           <input
                             type="email"
                             name="email"
-                            placeholder="Your Email"
+                            placeholder="Email"
                             required
                             autocomplete="off"
                           />
@@ -48,7 +48,7 @@ const ContactComps = () => {
                             name="text"
                             cols="30"
                             rows="10"
-                            placeholder="Message"
+                            placeholder="Pesan"
                             required
                           ></textarea>
                         </td>
@@ -61,7 +61,7 @@ const ContactComps = () => {
                             onclick="return confirm"
                             className="btn-contact btn btn-primary"
                           >
-                            Send
+                            Kirim
                           </button>
                         </td>
                       </tr>

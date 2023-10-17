@@ -28,8 +28,8 @@ const AboutComps = () => {
                 See More
               </a> */}
             <button type="button" class="slep btn-outline-primary mt-3">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfj1bfALpUsQUhTyYF0eITSo_DcoBXTEIfRAAPA05Weiv_-eg/viewform" rel="noreferrer noopener" target="_blank">
-                Pendaftaran
+              <a href="/" rel="noreferrer noopener">
+                Pendaftaran Ditutup
               </a>
             </button>
           </div>
