@@ -7,6 +7,28 @@ const AboutComps = () => {
     <section className="her mt-5">
       <div className="container">
         <div className="row ">
+        <div className="col-md-6  hero-image text-center">
+            <img src="assets/logo/wyiialog.png " className="img-fluid"></img>
+            {/* <QuoteWrapper className="flexCenter darkBg radius8 mx-auto">
+              <QuotesWrapper className="mx-auto"> */}
+                {/* <QuotesIcon /> */}
+              {/* </QuotesWrapper>
+              <div className="mx-auto">
+                <p className="font15 whiteColor mx-auto">
+                  <em>
+                    Silahkan daftarkan team terbaik mu, selamat berlomba dan
+                    juara.
+                  </em>
+                </p>
+                <p
+                  className="font13 orangeColor textRight"
+                  style={{ marginTop: "10px" }}
+                >
+                  IYSA Official
+                </p>
+              </div>
+            </QuoteWrapper> */}
+          </div>
           <div className="col-md-6 hero-content mt-auto mb-auto text-center">
             {/* <h1 className="sub">WELCOME</h1> */}
             <h1 className="">IIF - Nasional</h1>
@@ -34,28 +56,7 @@ const AboutComps = () => {
             </button>
           </div>
 
-          <div className="col-md-6  hero-image text-center">
-            <img src="assets/logo/surabaya.WebP " className="img-fluid"></img>
-            {/* <QuoteWrapper className="flexCenter darkBg radius8 mx-auto">
-              <QuotesWrapper className="mx-auto"> */}
-                {/* <QuotesIcon /> */}
-              {/* </QuotesWrapper>
-              <div className="mx-auto">
-                <p className="font15 whiteColor mx-auto">
-                  <em>
-                    Silahkan daftarkan team terbaik mu, selamat berlomba dan
-                    juara.
-                  </em>
-                </p>
-                <p
-                  className="font13 orangeColor textRight"
-                  style={{ marginTop: "10px" }}
-                >
-                  IYSA Official
-                </p>
-              </div>
-            </QuoteWrapper> */}
-          </div>
+        
         </div>
       </div>
     </section>

@@ -37,7 +37,7 @@
 .her .hero-image img {
   width: 700px;
   height: auto;
-  margin: 1rem;
+  margin: 0rem;
 }
 
 @media (max-width: 1440px) {
@@ -81,9 +81,10 @@
 
 @media (max-width: 426px) {
   .her .hero-image img {
-    width: 250px !important;
+    width: 350px !important;
     height: auto;
-    margin: 2rem;
+    /* margin: 1rem; */
+    margin-top: -1rem;
   }
   .her .row .hero-content h1 h2 p a button{
     justify-content: center;
