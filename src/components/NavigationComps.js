@@ -180,7 +180,7 @@ const NavigationComps = () => {
             {/* <button type="button" class="btn btn-outline-primary">Registration</button> */}
             <button type="button" class="btn btn-outline-secondary">
               <a href="https://drive.google.com/file/d/1_znDEnS9LyvnZ5422OPDdAcS3Jyh6-V9/view?usp=sharing" rel="noreferrer noopener" target="_blank">
-                Guide Book
+                Buku Panduan
               </a>
             </button>
           </ul>
