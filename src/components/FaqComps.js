@@ -15,7 +15,7 @@ const FaqComps = () => {
             Dikirimnya kemana sih?
           </h3>
           <p class="card-text">
-            Panitia akan mengirimkan LoA dan Invoice selambatnya 7 hari kerja
+            Panitia akan mengirimkan LoA dan Invoice selambatnya 14 hari kerja
             setelah kamu mendaftar. LoA dan Invoice akan kami kirimkan ke email
             ketua tim, jadi pastikan kamu mencantumkan alamat email yang aktif
             dan benar ya!
