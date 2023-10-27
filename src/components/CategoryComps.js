@@ -3,7 +3,8 @@ import "../css/Category.css";
 const CategoryComps = () => {
   return (
     <section class="products">
-      <h2>Kategori</h2>
+      <h2 className="garis-bawah">Kategori</h2>
+      {/* <h2 className="garis-bawah"></h2> */}
       <div class="all-products">
         <div class="product gap-2">
           <img src="./assets/logo/Inovation.WebP" />

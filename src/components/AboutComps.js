@@ -8,7 +8,7 @@ const AboutComps = () => {
       <div className="container">
         <div className="row ">
         <div className="col-md-6  hero-image text-center">
-            <img src="assets/logo/wyiialog.png " className="img-fluid"></img>
+            <img src="assets/logo/surabaya.WebP " className="img-fluid"></img>
             {/* <QuoteWrapper className="flexCenter darkBg radius8 mx-auto">
               <QuotesWrapper className="mx-auto"> */}
                 {/* <QuotesIcon /> */}
