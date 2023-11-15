@@ -136,17 +136,17 @@ const NavigationComps = () => {
                 </li>
               </ul>
             </li> */}
-            {/* <li className="menu-item menu-item-has-children">
+            <li className="menu-item menu-item-has-children">
               <a href="" data-toggle="sub-menu">
-                Our Team
+                Daftar Pemenang
                 
               </a>
               <ul className="sub-menu text-center">
                 <li className="menu-item">
-                  <a href="/ExpertTeam">Expert Team</a>
+                  <a href="https://drive.google.com/file/d/1Bqn5Oa7_bZeFxe5R3-vXUt131yUHnAWn/view?usp=sharing" target="_blank">Daftar Pemenang</a>
                 </li>
               </ul>
-            </li> */}
+            </li>
             {/* <li className="menu-item">
               <a href="/NewsletterPage">Guide Book</a>
             </li> */}

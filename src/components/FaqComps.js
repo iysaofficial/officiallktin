@@ -36,7 +36,7 @@ const FaqComps = () => {
           </p>
           <h3>
             4. Aku mau bayar biaya registrasi nih tapi kok aku tidak bisa
-            menemukan Invoicenya ya ? dan pembayarannya di transfer kemana sih ?
+            menemukan Invoicenya ya ? dan & &nbsp; pembayarannya di transfer kemana sih ?
           </h3>
           <p class="card-text">
             Hayo kamu sudah baca LoA sampai tuntas belum? Karena Invoice kami
