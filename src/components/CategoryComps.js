@@ -10,9 +10,6 @@ const CategoryComps = () => {
           <img src="./assets/logo/Inovation.WebP" />
           <div class="product-info">
             <h4 class="product-title">Innovation science</h4>
-            {/* <a class="product-btn" href="#">
-              Buy Now
-            </a> */}
           </div>
         </div>
         <div class="product">
