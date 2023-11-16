@@ -1,4 +1,4 @@
-import "../css/Category.css";
+import '../css/Category.css';
 
 const CategoryComps = () => {
   return (
@@ -16,9 +16,6 @@ const CategoryComps = () => {
           <img src="./assets/logo/life.WebP" />
           <div class="product-info">
             <h4 class="product-title">Life Science</h4>
-            {/* <a class="product-btn" href="#">
-              Buy Now
-            </a> */}
           </div>
         </div>
         <div class="product">
