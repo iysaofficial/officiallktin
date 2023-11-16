@@ -22,10 +22,6 @@ const CategoryComps = () => {
           <img src="./assets/logo/Envi.WebP" />
           <div class="product-info">
             <h4 class="product-title"> Environmental science</h4>
-            {/* <p class="product-price">$999</p>
-            <a class="product-btn" href="#">
-              Buy Now
-            </a> */}
           </div>
         </div>
         <div class="product">
