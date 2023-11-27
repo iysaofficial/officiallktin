@@ -50,7 +50,7 @@ const AboutComps = () => {
                 See More
               </a> */}
             <button type="button" class="slep btn-outline-primary mt-3">
-              <a href="/" rel="noreferrer noopener">
+              <a href="https://registrasi-nine.vercel.app" rel="noreferrer noopener">
                 Segera Hadir 2024
               </a>
             </button>
