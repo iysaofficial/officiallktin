@@ -1,31 +1,31 @@
 // Import CSS
-import "../css/Navigation.css";
+import '../css/Navigation.css';
 
-import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 const NavigationComps = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNav = () => {
     setIsOpen(!isOpen);
-    document.body.classList.toggle("hidden-scrolling");
+    document.body.classList.toggle('hidden-scrolling');
   };
 
   const collapseSubMenu = () => {
     const activeSubMenu = document.querySelector(
-      ".menu-item-has-children.active .sub-menu"
+      '.menu-item-has-children.active .sub-menu'
     );
-    activeSubMenu.removeAttribute("style");
-    activeSubMenu.parentElement.classList.remove("active");
+    activeSubMenu.removeAttribute('style');
+    activeSubMenu.parentElement.classList.remove('active');
   };
 
   const resizeFix = () => {
     if (isOpen) {
       toggleNav();
     }
-    if (document.querySelector(".menu-item-has-children.active")) {
+    if (document.querySelector('.menu-item-has-children.active')) {
       collapseSubMenu();
     }
   };
@@ -34,29 +34,32 @@ const NavigationComps = () => {
     const mediaSize = 991;
 
     const handleToggleNav = () => {
-      const navMenu = document.querySelector(".nav-menu");
-      const menuOverlay = document.querySelector(".menu-overlay");
-      navMenu.classList.toggle("open");
-      menuOverlay.classList.toggle("active");
+      const navMenu = document.querySelector('.nav-menu');
+      const menuOverlay = document.querySelector('.menu-overlay');
+      navMenu.classList.toggle('open');
+      menuOverlay.classList.toggle('active');
       toggleNav();
     };
 
     const handleMenuClick = (event) => {
       if (
-        event.target.hasAttribute("data-toggle") &&
+        event.target.hasAttribute('data-toggle') &&
         window.innerWidth <= mediaSize
       ) {
         event.preventDefault();
         const menuItemHasChildren = event.target.parentElement;
-        if (menuItemHasChildren.classList.contains("active")) {
+        if (menuItemHasChildren.classList.contains('active')) {
           collapseSubMenu();
         } else {
-          if (document.querySelector(".menu-item-has-children.active")) {
+          if (
+            document.querySelector('.menu-item-has-children.active')
+          ) {
             collapseSubMenu();
           }
-          menuItemHasChildren.classList.add("active");
-          const subMenu = menuItemHasChildren.querySelector(".sub-menu");
-          subMenu.style.maxHeight = subMenu.scrollHeight + "px";
+          menuItemHasChildren.classList.add('active');
+          const subMenu =
+            menuItemHasChildren.querySelector('.sub-menu');
+          subMenu.style.maxHeight = subMenu.scrollHeight + 'px';
         }
       }
     };
@@ -68,33 +71,33 @@ const NavigationComps = () => {
     };
 
     document
-      .querySelector(".open-nav-menu")
-      .addEventListener("click", handleToggleNav);
+      .querySelector('.open-nav-menu')
+      .addEventListener('click', handleToggleNav);
     document
-      .querySelector(".close-nav-menu")
-      .addEventListener("click", handleToggleNav);
+      .querySelector('.close-nav-menu')
+      .addEventListener('click', handleToggleNav);
     document
-      .querySelector(".menu-overlay")
-      .addEventListener("click", handleToggleNav);
+      .querySelector('.menu-overlay')
+      .addEventListener('click', handleToggleNav);
     document
-      .querySelector(".nav-menu")
-      .addEventListener("click", handleMenuClick);
-    window.addEventListener("resize", handleResize);
+      .querySelector('.nav-menu')
+      .addEventListener('click', handleMenuClick);
+    window.addEventListener('resize', handleResize);
 
     return () => {
       document
-        .querySelector(".open-nav-menu")
-        .removeEventListener("click", handleToggleNav);
+        .querySelector('.open-nav-menu')
+        .removeEventListener('click', handleToggleNav);
       document
-        .querySelector(".close-nav-menu")
-        .removeEventListener("click", handleToggleNav);
+        .querySelector('.close-nav-menu')
+        .removeEventListener('click', handleToggleNav);
       document
-        .querySelector(".menu-overlay")
-        .removeEventListener("click", handleToggleNav);
+        .querySelector('.menu-overlay')
+        .removeEventListener('click', handleToggleNav);
       document
-        .querySelector(".nav-menu")
-        .removeEventListener("click", handleMenuClick);
-      window.removeEventListener("resize", handleResize);
+        .querySelector('.nav-menu')
+        .removeEventListener('click', handleMenuClick);
+      window.removeEventListener('resize', handleResize);
     };
   }, [isOpen]);
 
@@ -102,7 +105,7 @@ const NavigationComps = () => {
     <header className="header">
       <div className="header-main">
         <div className="logo">
-          <img src="./assets/logo/iif.WebP" alt="" />
+          <img src="./assets/logo/LKTIN.png" alt="" />
         </div>
         <div className="open-nav-menu">
           <span></span>
@@ -121,7 +124,7 @@ const NavigationComps = () => {
               <a href="/">Utama</a>
             </li>
             <li className="menu-item">
-              <a href="#About">Tetang</a>
+              <a href="/#About">Tetang</a>
             </li>
             {/* <li className="menu-item menu-item-has-children">
               <a href="" data-toggle="sub-menu">
@@ -138,15 +141,42 @@ const NavigationComps = () => {
             </li> */}
             <li className="menu-item menu-item-has-children">
               <a href="" data-toggle="sub-menu">
-                Daftar Pemenang
-                
+                Kurasi
               </a>
               <ul className="sub-menu text-center">
                 <li className="menu-item">
-                  <a href="https://drive.google.com/file/d/1Bqn5Oa7_bZeFxe5R3-vXUt131yUHnAWn/view?usp=sharing" target="_blank">Daftar Pemenang</a>
+                  <a
+                    href="https://drive.google.com/drive/folders/1LUmfYpgQ8OUqW1_jBiOIHeBtVHejlJ4o"
+                    target="_blank"
+                  >
+                    Kurasi 2022
+                  </a>
+                </li>
+                <li className="menu-item">
+                  <a
+                    href="https://drive.google.com/drive/folders/116iUwWOIHdVH1IgF6Z7ckDvc8CkYzoth"
+                    target="_blank"
+                  >
+                    Kurasi 2023
+                  </a>
                 </li>
               </ul>
             </li>
+            {/* <li className="menu-item menu-item-has-children">
+              <a href="" data-toggle="sub-menu">
+                Daftar Pemenang
+              </a>
+              <ul className="sub-menu text-center">
+                <li className="menu-item">
+                  <a
+                    href="https://drive.google.com/file/d/1Bqn5Oa7_bZeFxe5R3-vXUt131yUHnAWn/view?usp=sharing"
+                    target="_blank"
+                  >
+                    Daftar Pemenang
+                  </a>
+                </li>
+              </ul>
+            </li> */}
             {/* <li className="menu-item">
               <a href="/NewsletterPage">Guide Book</a>
             </li> */}
@@ -179,7 +209,11 @@ const NavigationComps = () => {
             </li>
             {/* <button type="button" class="btn btn-outline-primary">Registration</button> */}
             <button type="button" class="btn btn-outline-secondary">
-              <a href="https://drive.google.com/file/d/1_znDEnS9LyvnZ5422OPDdAcS3Jyh6-V9/view?usp=sharing" rel="noreferrer noopener" target="_blank">
+              <a
+                href="https://drive.google.com/file/d/15Yoy5jRMlsQBe0bzZTXSB8hT6djaW6rJ/view?usp=sharing"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
                 Buku Panduan
               </a>
             </button>

@@ -10,21 +10,31 @@
 
 .her .slep {
   width: 270px;
-  background-color: #8A7FFF;
   border-radius: 6px;
-  border: #99bdff 2px solid;
+  background-color: #262521;
+  border-color: #262521;
+  border: #262521 2px solid;
   height: 70px;
+  
 }
 
 .her .slep a {
   color: #ffffff;
   font-weight: bold;
   font-size: 20px;
+  text-decoration: none;
 }
 
 .her .slep:hover {
-  box-shadow: 8px 8px #99bdff;
-  color: #ffffff;
+  box-shadow: 8px 8px #262521;
+  background-color: #FFD602;
+  border-color: #262521;
+  color: #262521;
+  transition: 0.3s;
+}
+
+.her .slep a:hover {
+  color: #262521;
   transition: 0.3s;
 }
 

@@ -16,10 +16,14 @@
 }
 
 
-.event_sponser_area {
-    background-color: #f5f5f5;
-    margin-top: 120px;
+/* .event_sponser_area {
+    background-color: ;
+    margin-top: 50px;
     
+} */
+
+.organized-image h1{
+  font-weight: bold;
 }
 
 @media (max-width:426px) {

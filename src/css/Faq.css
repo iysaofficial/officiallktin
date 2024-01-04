@@ -1,7 +1,7 @@
 .garis-bawah::after {
   position: absolute;
   content: "";
-  background: #8a7fff;
+  background: #FFD602;
   height: 4px;
   width: 180px;
   left: 50%;
@@ -12,7 +12,7 @@
 .cards {
   width: 80rem;
   border: #a9a9a9 1px solid;
-  margin-top: 80px;
+  margin-top: 1px;
   margin-bottom: 200px;
   border-radius: 10px;
 }
@@ -20,8 +20,8 @@
 .cards .card-header {
   font-size: 40px;
   font-weight: bold;
-  color: #ffffff;
-  background-color: #8a7fff;
+  color: #262521;
+  background-color: #FFD602;
 }
 
 .cards h3 {

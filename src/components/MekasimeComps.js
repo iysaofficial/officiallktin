@@ -1,14 +1,13 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import "../css/Mekanisme.css"
+import '../css/Mekanisme.css';
 
 const MekanismeComps = () => {
   return (
     <Wrapper id="projects">
       <div className="whiteBg">
-        <div className="container">
-        </div>
+        <div className="container"></div>
       </div>
       <div className="lightBg">
         <div className="container">
@@ -16,23 +15,33 @@ const MekanismeComps = () => {
             <AddLeft>
               <AddLeftInner>
                 <ImgWrapper className="flexCenter">
-                  <img className="radius8" src="./assets/logo/add2.jpg" alt="add" />
+                  <img
+                    className="radius8"
+                    src="./assets/logo/D.jpeg"
+                    alt="add"
+                  />
                 </ImgWrapper>
               </AddLeftInner>
             </AddLeft>
             <AddRight>
               <h4 className="font15 semiBold">
-                Tugu Pahlawan, Surabaya, Photo by:IG @ayodab
+                
               </h4>
-              <h2 className="font40 extraBold">MEKANISME KOMPETISI</h2>
+              <h2 className="font40 extraBold">Ketentuan:</h2>
               <p className="font16">
-                1. Setiap tim wajib membawa poster ukuran A0, mendekorasi stan
-                yang disediakan panitia. (dekorasi tidak boleh berlebihan/di
-                luar tema proyek)
+                1. Peserta wajib menyerahkan Full Paper (karya ilmiah
+                lengkap) yang terdiri dari bab 1-5, daftar pustaka,
+                daftar gambar dan daftar lampiran.
               </p>
               <p className="font16">
-                2. Penjurian akan dilakukan secara luring di stan masing - masing
-                peserta
+                2. Berkas yang masuk akan dinilai oleh dewan juri.
+              </p>
+              <p className="font16">
+                3. Berkas yang masuk akan dinilai oleh dewan juri.
+              </p>
+              <p className="font16">
+                4. Presentasi akan dilaksanakan pada tanggal 25
+                Januari 2023.
               </p>
             </AddRight>
           </Advertising>
@@ -43,8 +52,6 @@ const MekanismeComps = () => {
 };
 
 export default MekanismeComps;
-
-
 
 const Wrapper = styled.section`
   width: 100%;
