@@ -124,7 +124,7 @@ const NavigationComps = () => {
               <a href="/">Utama</a>
             </li>
             <li className="menu-item">
-              <a href="/#About">Tetang</a>
+              <a href="/#About">Tentang</a>
             </li>
             {/* <li className="menu-item menu-item-has-children">
               <a href="" data-toggle="sub-menu">
