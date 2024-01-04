@@ -73,7 +73,7 @@ const FooterComps = () => {
               <a href="/">Utama</a>
             </li>
             <li>
-              <a href="#About">About</a>
+              <a href="/#About">Tentang</a>
             </li>
             <li>
               <a href="/Faq">FAQ</a>
@@ -85,7 +85,7 @@ const FooterComps = () => {
         </div>
         <div className="colFooter">
           <h3>
-            Newsletter{" "}
+            Newsletter
             <div className="underline">
               <span></span>
             </div>{" "}
