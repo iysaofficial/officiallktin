@@ -51,7 +51,7 @@ const AboutComps = () => {
               </a> */}
             <button type="button" class="slep btn-outline-primary mt-3">
               <a href="https://registasi-lktin.vercel.app" rel="noreferrer noopener">
-                Open Registrasi
+                Buka Pendaftaran
               </a>
             </button>
           </div>

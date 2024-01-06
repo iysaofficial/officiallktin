@@ -174,7 +174,7 @@ const FooterComps = () => {
       </div>
       <hr className="mx-auto" />
       <p className="copyright">
-        Copyright &copy; 2023, Developed by IYSA IT Division
+        Copyright &copy; 2024, Developed by IYSA IT Division
       </p>
     </footer>
   );

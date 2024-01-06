@@ -10,7 +10,7 @@ const ContactComps = () => {
               <div class="box">
                 <h1>Kontak Kami</h1>
                 <div class="form-contact">
-                  <form action="https://formspree.io/f/xqkvlend" method="POST">
+                  <form action="https://formspree.io/f/xbjnjqne" method="POST">
                     <table>
                       <tr>
                         <td>
