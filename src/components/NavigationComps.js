@@ -210,7 +210,7 @@ const NavigationComps = () => {
             {/* <button type="button" class="btn btn-outline-primary">Registration</button> */}
             <button type="button" class="btn btn-outline-secondary">
               <a
-                href="https://drive.google.com/file/d/15Yoy5jRMlsQBe0bzZTXSB8hT6djaW6rJ/view?usp=sharing"
+                href="https://drive.google.com/file/d/1sgjtRWjIthPls0cjQ4iKcYVoxY0l4alC/view?usp=sharing"
                 rel="noreferrer noopener"
                 target="_blank"
               >
