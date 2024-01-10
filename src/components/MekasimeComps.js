@@ -24,9 +24,7 @@ const MekanismeComps = () => {
               </AddLeftInner>
             </AddLeft>
             <AddRight>
-              <h4 className="font15 semiBold">
-                
-              </h4>
+              <h4 className="font15 semiBold"></h4>
               <h2 className="font40 extraBold">Ketentuan:</h2>
               <p className="font16">
                 1. Peserta wajib menyerahkan Full Paper (karya ilmiah
@@ -40,8 +38,8 @@ const MekanismeComps = () => {
                 3. Berkas yang masuk akan dinilai oleh dewan juri.
               </p>
               <p className="font16">
-                4. Presentasi akan dilaksanakan pada tanggal 25
-                Januari 2023.
+                4. Presentasi akan dilaksanakan pada tanggal 28
+                Februari 2024.
               </p>
             </AddRight>
           </Advertising>

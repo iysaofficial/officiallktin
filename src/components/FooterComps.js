@@ -43,12 +43,12 @@ const FooterComps = () => {
           <br></br>
           <br></br>
           <a
-            href="mailto:youngscientist.iysa@gmail.com"
+            href="mailto:lktin.iysa@gmail.com"
             target="_blank"
             rel="noreferrer"
             className="office "
           >
-            youngscientist.iysa@gmail.com
+            lktin.iysa@gmail.com
           </a>
           <br></br>
           <br></br>
