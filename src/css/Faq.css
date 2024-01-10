@@ -1,7 +1,7 @@
 .garis-bawah::after {
   position: absolute;
-  content: "";
-  background: #FFD602;
+  content: '';
+  background: #ffd602;
   height: 4px;
   width: 180px;
   left: 50%;
@@ -14,14 +14,14 @@
   border: #a9a9a9 1px solid;
   margin-top: 1px;
   margin-bottom: 200px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .cards .card-header {
   font-size: 40px;
   font-weight: bold;
   color: #262521;
-  background-color: #FFD602;
+  background-color: #ffd602;
 }
 
 .cards h3 {
@@ -45,7 +45,7 @@
   }
   .garis-bawah::after {
     position: absolute;
-    content: "";
+    content: '';
     background: #8a7fff;
     height: 4px;
     width: 180px;
