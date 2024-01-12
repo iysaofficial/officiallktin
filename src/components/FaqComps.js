@@ -1,4 +1,4 @@
-import '../css/Faq.css';
+import "../css/Faq.css";
 
 const FaqComps = () => {
   return (
@@ -19,8 +19,8 @@ const FaqComps = () => {
                 aria-expanded="true"
                 aria-controls="collapseOne"
               >
-                Kapan kita akan mendapatkan email yang berisikan LoA
-                dan invoice dari panitia ?
+                Miinsa, kapan kami akan mendapatkan LoA kami? Dikirimnya kemana
+                sih?
               </button>
             </h2>
             <div
@@ -30,10 +30,10 @@ const FaqComps = () => {
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-                Setelah pendaftaran kamu kami terima, kami akan
-                mengirimkan email konfirmasi selambatnya 1X24 jam. Dan
-                untuk LoA akan kami kirimkan ke alamat email ketua tim
-                selambatnya 3X24 jam setelah pendaftaran.
+                Setelah pendaftaran kamu kami terima, kami akan mengirimkan
+                email konfirmasi selambatnya 1X24 jam. Dan untuk LoA akan kami
+                kirimkan ke alamat email ketua tim selambatnya 3X24 jam setelah
+                pendaftaran.
               </div>
             </div>
           </div>
@@ -47,7 +47,8 @@ const FaqComps = () => {
                 aria-expanded="false"
                 aria-controls="collapseTwo"
               >
-                Upload bukti payment di mana ?
+                Minsa, kapan kami akan mendapatkan LoA kami? Dikirimnya kemana
+                sih
               </button>
             </h2>
             <div
@@ -57,8 +58,8 @@ const FaqComps = () => {
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-                Link untuk upload berkas dan upload bukti pembayaran
-                akan dicantumkan di Invoice
+                Coba deh cek folder spam di email ketua tim kamu, mungkin email
+                dari tim IYSA masuk ke folder spam.
               </div>
             </div>
           </div>
@@ -72,7 +73,7 @@ const FaqComps = () => {
                 aria-expanded="false"
                 aria-controls="collapseThree"
               >
-                LoA dan invoice dikirim ke mana ?
+                Upload berkas lomba di mana sih Minsa ?
               </button>
             </h2>
             <div
@@ -82,11 +83,9 @@ const FaqComps = () => {
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-                LoA akan kami kirimkan ke alamat email ketua tim
-                selambatnya 3X24 jam setelah pendaftaran. untuk
-                invoice akan dikirimkan terpisah dengan LoA, invoice
-                dikirimkan ke alamat email ketua tim selambatnya 5x24
-                jam setelah pendaftaran
+                Link drive untuk upload berkas dan link untuk upload bukti
+                pembayaran akan dicantumkan di invoice. Kalian akan mendapatkan
+                invoice seperti ini
               </div>
             </div>
           </div>
@@ -100,9 +99,9 @@ const FaqComps = () => {
                 aria-expanded="false"
                 aria-controls="collapsefour"
               >
-                Aku mau bayar biaya registrasi nih tapi kok aku tidak
-                bisa menemukan Invoicenya ya ? dan & pembayarannya di
-                transfer kemana sih ?
+                Aku mau bayar biaya registrasi nih tapi kok aku tidak bisa
+                menemukan Invoicenya ya ? dan & pembayarannya di transfer kemana
+                sih ?
               </button>
             </h2>
             <div
@@ -112,12 +111,9 @@ const FaqComps = () => {
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-                Hayo kamu sudah baca LoA sampai tuntas belum? Karena
-                Invoice kami kirimkan bersama LoA tim kamu, pastikan
-                kamu sudah membaca email dari kami hingga tuntas yaa!
-                Untuk pembayaran, kamu bisa transfer ke rekening yang
-                tertera di dalam invoice ya. Pastikan kamu membayar
-                sesuai dengan nominal yang tertera di invoice, oke!
+                Link drive untuk upload berkas dan link untuk upload bukti
+                pembayaran akan dicantumkan di invoice. Kalian akan mendapatkan
+                invoice seperti ini 
               </div>
             </div>
           </div>
@@ -143,11 +139,10 @@ const FaqComps = () => {
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-                Jika sudah melakukan pembayaran, kamu bisa upload
-                buktinya ke link yang tercantum di invoice, dan
-                pastikan kamu mengisi dan mengupload bukti transfer
-                dengan benar agar panitia dapat mendatanya dengan
-                benar juga.
+                Jika sudah melakukan pembayaran, kamu bisa upload buktinya ke
+                link yang tercantum di invoice, dan pastikan kamu mengisi dan
+                mengupload bukti transfer dengan benar agar panitia dapat
+                mendatanya dengan benar juga.
               </div>
             </div>
           </div>
@@ -172,9 +167,8 @@ const FaqComps = () => {
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-                Kuitansi pembayaran akan kami kirimkan maksimal 7 hari
-                kerja ke email ketua tim, setelah kamu upload bukti
-                pembayaran ya!
+                Kuitansi pembayaran akan kami kirimkan maksimal 7 hari kerja ke
+                email ketua tim, setelah kamu upload bukti pembayaran ya!
               </div>
             </div>
           </div>
@@ -189,8 +183,8 @@ const FaqComps = () => {
                 aria-expanded="false"
                 aria-controls="collapseseven"
               >
-                Minsa, satu minggu lagi penjurian nih kok aku belum
-                terima jadwal presentasi tim aku ya ?
+                Minsa, satu minggu lagi penjurian nih kok aku belum terima
+                jadwal presentasi tim aku ya ?
               </button>
             </h2>
             <div
@@ -200,11 +194,10 @@ const FaqComps = () => {
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-                Jadwal presentasi peserta online akan kami kirimkan
-                selambatnya 2 hari sebelum penjurian berlangsung ke
-                whatsapp grup dan juga email ketua tim. Pastikan kamu
-                rajin cek informasi yang kami berikan di whatsapp grup
-                dan juga email ya!
+                Jadwal presentasi peserta online akan kami kirimkan selambatnya
+                2 hari sebelum penjurian berlangsung ke whatsapp grup dan juga
+                email ketua tim. Pastikan kamu rajin cek informasi yang kami
+                berikan di whatsapp grup dan juga email ya!
               </div>
             </div>
           </div>
@@ -236,10 +229,9 @@ const FaqComps = () => {
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-                Jadwal presentasi akan kami berikan selambatnya 2 hari
-                sebelum penjurian berlangsung atau bisa juga lebih
-                cepat, dan kami kirimkan melalui WA grup dan juga
-                e-mail ketua tim.
+                Jadwal presentasi akan kami berikan selambatnya 2 hari sebelum
+                penjurian berlangsung atau bisa juga lebih cepat, dan kami
+                kirimkan melalui WA grup dan juga e-mail ketua tim.
               </div>
             </div>
           </div>
@@ -253,8 +245,8 @@ const FaqComps = () => {
                 aria-expanded="false"
                 aria-controls="collapsenine"
               >
-                Presentasi online menggunakan aplikasi apa?
-                Zoom,Google meet atau yg lainnya?
+                Presentasi online menggunakan aplikasi apa? Zoom,Google meet
+                atau yg lainnya?
               </button>
             </h2>
             <div
@@ -264,9 +256,9 @@ const FaqComps = () => {
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-                Untuk penjurian online kami selalu memakai aplikasi
-                Zoom ya teman-teman, dan pastikan aplikasi Zoom kamu
-                sudah yang terbaru yaa.
+                Untuk penjurian online kami selalu memakai aplikasi Zoom ya
+                teman-teman, dan pastikan aplikasi Zoom kamu sudah yang terbaru
+                yaa.
               </div>
             </div>
           </div>
@@ -290,9 +282,8 @@ const FaqComps = () => {
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-                Link Zoom akan kami berikan dihari penjurian, dan akan
-                kami kirim berkala di grup sesuai jam presentasi tim
-                kalian
+                Link Zoom akan kami berikan dihari penjurian, dan akan kami
+                kirim berkala di grup sesuai jam presentasi tim kalian
               </div>
             </div>
           </div>
@@ -306,8 +297,8 @@ const FaqComps = () => {
                 aria-expanded="false"
                 aria-controls="collapseeleven"
               >
-                Berapa banyak akun zoom yang bisa join dan penamaannya
-                seperti apa?
+                Berapa banyak akun zoom yang bisa join dan penamaannya seperti
+                apa?
               </button>
             </h2>
             <div
@@ -317,10 +308,10 @@ const FaqComps = () => {
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-                Teman-teman bisa masuk ke Zoom maksimal dengan 5 akun
-                untuk peserta, dan semua akun Zoom harus mengikuti
-                format nama yang sudah kami berikan yaitu "Nomor
-                ruangan_Nama Ketua Tim_Nama Institusi”.
+                Teman-teman bisa masuk ke Zoom maksimal dengan 5 akun untuk
+                peserta, dan semua akun Zoom harus mengikuti format nama yang
+                sudah kami berikan yaitu "Nomor ruangan_Nama Ketua Tim_Nama
+                Institusi”.
               </div>
             </div>
           </div>
@@ -347,8 +338,7 @@ const FaqComps = () => {
               <div class="accordion-body">
                 Teman-teman akan diberikan waktu 15 menit untuk 1 sesi
                 presentasi yang akan dibagi 2 yaitu 7 menit awal untuk
-                presentasi dan 8 menit akhir untuk sesi tanya jawab
-                dengan juri
+                presentasi dan 8 menit akhir untuk sesi tanya jawab dengan juri
               </div>
             </div>
           </div>
@@ -382,9 +372,9 @@ const FaqComps = () => {
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-                Pengumuman pemenang dilaksanakan pada hari terakhir
-                disetiap event, kamu bisa cek tanggalnya di jadwal
-                yang tertera di Guide Book.
+                Pengumuman pemenang dilaksanakan pada hari terakhir disetiap
+                event, kamu bisa cek tanggalnya di jadwal yang tertera di Guide
+                Book.
               </div>
             </div>
           </div>
@@ -408,8 +398,8 @@ const FaqComps = () => {
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-                Kamu bisa cek hasil pemenang di official website dari
-                event yang kamu ikuti
+                Kamu bisa cek hasil pemenang di official website dari event yang
+                kamu ikuti
               </div>
             </div>
           </div>
@@ -433,12 +423,11 @@ const FaqComps = () => {
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-                IYSA TIDAK mengirimkan E-Certificate untuk peserta
-                Nasional atau Peserta Indonesia yang mengikuti event
-                secara online. Peserta Nasional Online hanya akan
-                mendapatkan sertifikat dalam bentuk TERCETAK/Hard yang
-                nantinya akan dikirimkan bersama dengan medali melalui
-                ekspedisi JNE
+                IYSA TIDAK mengirimkan E-Certificate untuk peserta Nasional atau
+                Peserta Indonesia yang mengikuti event secara online. Peserta
+                Nasional Online hanya akan mendapatkan sertifikat dalam bentuk
+                TERCETAK/Hard yang nantinya akan dikirimkan bersama dengan
+                medali melalui ekspedisi JNE
               </div>
             </div>
           </div>
@@ -462,10 +451,10 @@ const FaqComps = () => {
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-                Sertifikat akan dikirimkan selambatnya satu bulan
-                setelah pengumuman pemenang. Kamu bisa cek secara
-                berkala resi pengiriman yang kami kirimkan di Whatsapp
-                grup apakah sertifikat kamu sudah dikirim atau belum.
+                Sertifikat akan dikirimkan selambatnya satu bulan setelah
+                pengumuman pemenang. Kamu bisa cek secara berkala resi
+                pengiriman yang kami kirimkan di Whatsapp grup apakah sertifikat
+                kamu sudah dikirim atau belum.
               </div>
             </div>
           </div>
@@ -480,8 +469,7 @@ const FaqComps = () => {
                 aria-expanded="false"
                 aria-controls="collapselima"
               >
-                Dimana kami bisa mendapatkan sertifikat
-                supervisor/pembimbing?
+                Dimana kami bisa mendapatkan sertifikat supervisor/pembimbing?
               </button>
             </h2>
             <div
@@ -491,9 +479,8 @@ const FaqComps = () => {
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-                Kamu bisa melihat dan mengunduh sertifikat
-                supervisor/pembimbing di official website dari event
-                yang kamu ikuti
+                Kamu bisa melihat dan mengunduh sertifikat supervisor/pembimbing
+                di official website dari event yang kamu ikuti
               </div>
             </div>
           </div>
@@ -517,12 +504,11 @@ const FaqComps = () => {
               data-bs-parent="#accordionExample"
             >
               <div class="accordion-body">
-                Untuk peserta offline kamu bisa langsung melakukan
-                penggandaan medali di tempat setelah pengumuman
-                pemenang berlangsung. Dan untuk peserta online kamu
-                bisa melakukan penggandaan medali melalui link yang
-                kami kirimkan di Whatsapp grup, kami akan mengirimkan
-                informasi penggandaan di Whatsapp grup selambatnya 2
+                Untuk peserta offline kamu bisa langsung melakukan penggandaan
+                medali di tempat setelah pengumuman pemenang berlangsung. Dan
+                untuk peserta online kamu bisa melakukan penggandaan medali
+                melalui link yang kami kirimkan di Whatsapp grup, kami akan
+                mengirimkan informasi penggandaan di Whatsapp grup selambatnya 2
                 hari setelah pengumuman pemenang.
               </div>
             </div>
