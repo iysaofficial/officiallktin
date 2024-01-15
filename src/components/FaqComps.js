@@ -84,8 +84,7 @@ const FaqComps = () => {
             >
               <div class="accordion-body">
                 Link drive untuk upload berkas dan link untuk upload bukti
-                pembayaran akan dicantumkan di invoice. Kalian akan mendapatkan
-                invoice seperti ini
+                pembayaran akan dicantumkan di invoice.
               </div>
             </div>
           </div>
