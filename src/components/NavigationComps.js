@@ -141,6 +141,29 @@ const NavigationComps = () => {
             </li> */}
             <li className="menu-item menu-item-has-children">
               <a href="" data-toggle="sub-menu">
+                Daftar Pemenang
+              </a>
+              <ul className="sub-menu text-center">
+                <li className="menu-item">
+                  <a
+                    href="https://docs.google.com/spreadsheets/d/1F-c6G0zq-ACcTBivnfXocEAUiDdk2KvdRywIJaqofUQ/edit?usp=sharing"
+                    target="_blank"
+                  >
+                    &nbsp; &nbsp; &nbsp; Daftar Pemenang 2023
+                  </a>
+                </li>
+                <li className="menu-item">
+                  <a
+                    href="https://docs.google.com/spreadsheets/d/17hmS4edqF4nQCu67lHXSZa_301MiySRuf44apoYe5-s/edit?usp=sharing"
+                    target="_blank"
+                  >
+                    &nbsp; &nbsp; &nbsp; Daftar Pemenang 2022
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li className="menu-item menu-item-has-children">
+              <a href="" data-toggle="sub-menu">
                 Kurasi
               </a>
               <ul className="sub-menu text-center">
