@@ -19,7 +19,7 @@ const FaqComps = () => {
                 aria-expanded="true"
                 aria-controls="collapseOne"
               >
-                Miinsa, kapan kami akan mendapatkan LoA kami? Dikirimnya kemana
+                Minsa, kapan kami akan mendapatkan LoA kami? Dikirimnya kemana
                 sih?
               </button>
             </h2>
