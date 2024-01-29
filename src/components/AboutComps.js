@@ -50,8 +50,8 @@ const AboutComps = () => {
                 See More
               </a> */}
             <button type="button" class="slep btn-outline-primary mt-3">
-              <a href="https://registasi-lktin.vercel.app" rel="noreferrer noopener" target="_blank">
-                Buka Pendaftaran
+              <a href="/" rel="noreferrer noopener" target="_blank">
+                Pendaftaran ditutup
               </a>
             </button>
           </div>
