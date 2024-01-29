@@ -50,7 +50,7 @@ const AboutComps = () => {
                 See More
               </a> */}
             <button type="button" class="slep btn-outline-primary mt-3">
-              <a href="/" rel="noreferrer noopener" target="_blank">
+              <a href="/" rel="noreferrer noopener">
                 Pendaftaran ditutup
               </a>
             </button>
