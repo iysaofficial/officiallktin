@@ -126,19 +126,6 @@ const NavigationComps = () => {
             <li className="menu-item">
               <a href="/#About">Tentang</a>
             </li>
-            {/* <li className="menu-item menu-item-has-children">
-              <a href="" data-toggle="sub-menu">
-                Curation
-              </a>
-              <ul className="sub-menu text-center">
-                <li className="menu-item">
-                  <a href="/CurationOSPC">Curation OSPC</a>
-                </li>
-                <li className="menu-item">
-                  <a href="/CurationLKTIN">Curation LKTIN</a>
-                </li>
-              </ul>
-            </li> */}
             <li className="menu-item menu-item-has-children">
               <a href="" data-toggle="sub-menu">
                 Daftar Pemenang
@@ -146,7 +133,7 @@ const NavigationComps = () => {
               <ul className="sub-menu text-center">
                 <li className="menu-item">
                   <a
-                    href="https://docs.google.com/spreadsheets/d/1F-c6G0zq-ACcTBivnfXocEAUiDdk2KvdRywIJaqofUQ/edit?usp=sharing"
+                    href="https://drive.google.com/file/d/1qfi4WH9g_dKtAliKvOElrZpyJuyH5WVf/view?usp=sharing"
                     target="_blank"
                   >
                     &nbsp; &nbsp; &nbsp; Daftar Pemenang 2023
@@ -154,7 +141,7 @@ const NavigationComps = () => {
                 </li>
                 <li className="menu-item">
                   <a
-                    href="https://docs.google.com/spreadsheets/d/17hmS4edqF4nQCu67lHXSZa_301MiySRuf44apoYe5-s/edit?usp=sharing"
+                    href="https://drive.google.com/file/d/1GGVs9LOiirtrCoXhDK2MCu8Y_E7x-HHH/view?usp=sharing"
                     target="_blank"
                   >
                     &nbsp; &nbsp; &nbsp; Daftar Pemenang 2022
@@ -169,61 +156,22 @@ const NavigationComps = () => {
               <ul className="sub-menu text-center">
                 <li className="menu-item">
                   <a
-                    href="https://drive.google.com/drive/folders/1LUmfYpgQ8OUqW1_jBiOIHeBtVHejlJ4o"
-                    target="_blank"
-                  >
-                    Kurasi 2022
-                  </a>
-                </li>
-                <li className="menu-item">
-                  <a
                     href="https://drive.google.com/drive/folders/116iUwWOIHdVH1IgF6Z7ckDvc8CkYzoth"
                     target="_blank"
                   >
                     Kurasi 2023
                   </a>
                 </li>
-              </ul>
-            </li>
-            {/* <li className="menu-item menu-item-has-children">
-              <a href="" data-toggle="sub-menu">
-                Daftar Pemenang
-              </a>
-              <ul className="sub-menu text-center">
                 <li className="menu-item">
                   <a
-                    href="https://drive.google.com/file/d/1Bqn5Oa7_bZeFxe5R3-vXUt131yUHnAWn/view?usp=sharing"
+                    href="https://drive.google.com/drive/folders/1LUmfYpgQ8OUqW1_jBiOIHeBtVHejlJ4o"
                     target="_blank"
                   >
-                    Daftar Pemenang
+                    Kurasi 2022
                   </a>
                 </li>
               </ul>
-            </li> */}
-            {/* <li className="menu-item">
-              <a href="/NewsletterPage">Guide Book</a>
-            </li> */}
-            {/* <li className="menu-item">
-              <a href="/NewsletterPage">Newsletter</a>
-            </li> */}
-            {/* <li className="menu-item menu-item-has-children">
-              <a href="" data-toggle="sub-menu">
-                Gallery
-              </a>
-              <ul className="sub-menu text-center">
-                <li className="menu-item">
-                  <a
-                    href="https://drive.google.com/drive/u/2/folders/1UVZeNGaNWk-TyNgSY0lAsWUcN-X7Nxle"
-                    target="-blink"
-                  >
-                    Photo
-                  </a>
-                </li>
-                <li className="menu-item">
-                  <a href="/GalleryVideo">Video</a>
-                </li>
-              </ul>
-            </li> */}
+            </li>
             <li className="menu-item">
               <a href="/Faq">FAQ</a>
             </li>
