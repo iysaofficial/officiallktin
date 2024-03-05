@@ -127,10 +127,18 @@ const NavigationComps = () => {
               <a href="/#About">Tentang</a>
             </li>
             <li className="menu-item menu-item-has-children">
-              <a href="" data-toggle="sub-menu">
+              <a data-toggle="sub-menu">
                 Daftar Pemenang
               </a>
               <ul className="sub-menu text-center">
+                <li className="menu-item">
+                  <a
+                    href="https://drive.google.com/file/d/1KSSGQePokl7TtijbGsZUDdrGLi0AHxJj/view?usp=drive_link"
+                    target="_blank"
+                  >
+                    &nbsp; &nbsp; &nbsp; Daftar Pemenang 2024
+                  </a>
+                </li>
                 <li className="menu-item">
                   <a
                     href="https://drive.google.com/file/d/1qfi4WH9g_dKtAliKvOElrZpyJuyH5WVf/view?usp=sharing"
@@ -150,7 +158,7 @@ const NavigationComps = () => {
               </ul>
             </li>
             <li className="menu-item menu-item-has-children">
-              <a href="" data-toggle="sub-menu">
+              <a data-toggle="sub-menu">
                 Kurasi
               </a>
               <ul className="sub-menu text-center">
@@ -179,7 +187,7 @@ const NavigationComps = () => {
               <a href="/Contact">Kontak</a>
             </li>
             {/* <button type="button" class="btn btn-outline-primary">Registration</button> */}
-            <button type="button" class="btn btn-outline-secondary">
+            {/* <button type="button" class="btn btn-outline-secondary">
               <a
                 href="https://drive.google.com/file/d/1sgjtRWjIthPls0cjQ4iKcYVoxY0l4alC/view?usp=sharing"
                 rel="noreferrer noopener"
@@ -187,7 +195,7 @@ const NavigationComps = () => {
               >
                 Buku Panduan
               </a>
-            </button>
+            </button> */}
           </ul>
         </nav>
       </div>

@@ -32,7 +32,7 @@ const AboutComps = () => {
           <div className="col-md-6 hero-content mt-auto mb-auto text-center">
             {/* <h1 className="sub">WELCOME</h1> */}
             <h1 className="">SMART RESEARCHER LKTIN</h1>
-            <h2 className="">Lomba Karya Tulis Ilmiah Nasional 2024</h2>
+            <h2 className="">Lomba Karya Tulis Ilmiah Nasional</h2>
             {/* <p className="">
                 Indonesian Young Scientist Association (IYSA) is an institution
                 engaged in developing Indonesian students potential, talents, and
@@ -51,7 +51,7 @@ const AboutComps = () => {
               </a> */}
             <button type="button" class="slep btn-outline-primary mt-3">
               <a href="/" rel="noreferrer noopener">
-                Pendaftaran ditutup
+                Segera Hadir 2025
               </a>
             </button>
           </div>
