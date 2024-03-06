@@ -159,6 +159,21 @@ const NavigationComps = () => {
             </li>
             <li className="menu-item menu-item-has-children">
               <a data-toggle="sub-menu">
+                Liputan Media
+              </a>
+              <ul className="sub-menu text-center">
+                <li className="menu-item">
+                  <a
+                    href="https://drive.google.com/file/d/1VMMP1vwq2f0mMrnuUHWoJHItQc6ly-Fl/view?usp=sharing"
+                    target="_blank"
+                  >
+                    &nbsp; &nbsp; &nbsp; Pesan Siaran 2024
+                  </a>
+                </li> 
+              </ul>
+            </li>
+            <li className="menu-item menu-item-has-children">
+              <a data-toggle="sub-menu">
                 Kurasi
               </a>
               <ul className="sub-menu text-center">
