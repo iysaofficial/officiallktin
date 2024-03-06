@@ -164,7 +164,7 @@ const NavigationComps = () => {
               <ul className="sub-menu text-center">
                 <li className="menu-item">
                   <a
-                    href="https://drive.google.com/file/d/1VMMP1vwq2f0mMrnuUHWoJHItQc6ly-Fl/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1tDzL9ykai1vTqyPZkct1EaC0ZdqsBQA3/view?usp=sharings"
                     target="_blank"
                   >
                     &nbsp; &nbsp; &nbsp; Pesan Siaran 2024
