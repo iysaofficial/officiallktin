@@ -4,6 +4,7 @@ import BackgroundComps from "./components/BackgroundComps";
 import CategoryComps from "./components/CategoryComps";
 // import ContactComps from "./components/ContactComps";
 import MekanismeComps from "./components/MekasimeComps";
+import AfterEvent from "./components/afterevent";
 
 function Landing () {
     return (
@@ -13,6 +14,7 @@ function Landing () {
         <BackgroundComps />
         <CategoryComps />
         <MekanismeComps />
+        <AfterEvent />
         {/* <ProvisionComps /> */}
         {/* <FaqComps /> */}
         {/* <ContactComps /> */}
