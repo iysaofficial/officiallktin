@@ -177,6 +177,14 @@ const NavigationComps = () => {
                 Kurasi
               </a>
               <ul className="sub-menu text-center">
+              <li className="menu-item">
+                  <a
+                    href="https://drive.google.com/drive/folders/1t2OIucLyMyindORVKtKLrG_R4WKik20O?usp=drive_link"
+                    target="_blank"
+                  >
+                    Kurasi 2024
+                  </a>
+                </li>
                 <li className="menu-item">
                   <a
                     href="https://drive.google.com/drive/folders/116iUwWOIHdVH1IgF6Z7ckDvc8CkYzoth"
