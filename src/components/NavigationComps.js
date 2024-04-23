@@ -136,7 +136,7 @@ const NavigationComps = () => {
                     href="https://drive.google.com/file/d/1KSSGQePokl7TtijbGsZUDdrGLi0AHxJj/view?usp=drive_link"
                     target="_blank"
                   >
-                    &nbsp; &nbsp; &nbsp; Daftar Pemenang 2024
+                    &nbsp; &nbsp; Daftar Pemenang 2024
                   </a>
                 </li>
                 <li className="menu-item">
@@ -144,7 +144,7 @@ const NavigationComps = () => {
                     href="https://drive.google.com/file/d/1qfi4WH9g_dKtAliKvOElrZpyJuyH5WVf/view?usp=sharing"
                     target="_blank"
                   >
-                    &nbsp; &nbsp; &nbsp; Daftar Pemenang 2023
+                    &nbsp; &nbsp; Daftar Pemenang 2023
                   </a>
                 </li>
                 <li className="menu-item">
@@ -152,7 +152,7 @@ const NavigationComps = () => {
                     href="https://drive.google.com/file/d/1GGVs9LOiirtrCoXhDK2MCu8Y_E7x-HHH/view?usp=sharing"
                     target="_blank"
                   >
-                    &nbsp; &nbsp; &nbsp; Daftar Pemenang 2022
+                    &nbsp; &nbsp; Daftar Pemenang 2022
                   </a>
                 </li>
               </ul>
