@@ -210,7 +210,7 @@ const NavigationComps = () => {
               <ul className="sub-menu text-center">
               <li className="menu-item">
                   <a
-                    href="https://drive.google.com/drive/folders/1HsgWoauX96TdgQDIyLdDS9jWdy_nKMV3?usp=sharing"
+                    href="https://drive.google.com/drive/folders/13aMlFhXmtgysid4t2C_pfTprx91Ozm4e?usp=sharing"
                     target="_blank"
                   >
                     Sertifikat Supervisor
