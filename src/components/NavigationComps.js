@@ -203,6 +203,21 @@ const NavigationComps = () => {
                 </li>
               </ul>
             </li>
+            <li className="menu-item menu-item-has-children">
+              <a data-toggle="sub-menu">
+                Sertifikat
+              </a>
+              <ul className="sub-menu text-center">
+              <li className="menu-item">
+                  <a
+                    href="https://drive.google.com/drive/folders/1HsgWoauX96TdgQDIyLdDS9jWdy_nKMV3?usp=sharing"
+                    target="_blank"
+                  >
+                    Sertifikat Supervisor
+                  </a>
+                </li>
+              </ul>
+            </li>
             <li className="menu-item">
               <a href="/Faq">FAQ</a>
             </li>
