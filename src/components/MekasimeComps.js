@@ -24,7 +24,7 @@ const MekanismeComps = () => {
               </AddLeftInner>
             </AddLeft>
             <AddRight>
-              <h4 className="font15 semiBold"></h4>
+              <h4 className="font15 semiBold"> </h4>
               <h2 className="font40 extraBold">Ketentuan:</h2>
               <p className="font16">
                 1. Peserta wajib menyerahkan Full Paper (karya ilmiah
@@ -54,11 +54,7 @@ export default MekanismeComps;
 const Wrapper = styled.section`
   width: 100%;
 `;
-const HeaderInfo = styled.div`
-  @media (max-width: 860px) {
-    text-align: center;
-  }
-`;
+
 const Advertising = styled.div`
   padding: 100px 0;
   margin: 100px 0;
@@ -72,11 +68,7 @@ const Advertising = styled.div`
     margin: 80px 0 0px 0;
   }
 `;
-const ButtonsRow = styled.div`
-  @media (max-width: 860px) {
-    justify-content: space-between;
-  }
-`;
+
 const AddLeft = styled.div`
   position: relative;
   width: 50%;

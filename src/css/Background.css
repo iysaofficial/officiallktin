@@ -1,6 +1,6 @@
 .card    {
-    width: 80rem;
-    
+    width: 100%;
+    /* width: 80rem; */
     margin-top: 120px;
     margin-bottom: 200px;
 }
@@ -12,8 +12,9 @@
     background-color: #FFD602;
 }
 
-.card .card-text{
-    font-size: 20px;
+.card .card-text {
+    text-align: justify;
+    font-size: clamp(10px, 0.5rem + 1vw, 20px);
 }
 
 @media (max-width:426px) {

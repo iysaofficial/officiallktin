@@ -127,35 +127,9 @@ const NavigationComps = () => {
               <a href="/#About">Tentang</a>
             </li>
             <li className="menu-item menu-item-has-children">
-              <a data-toggle="sub-menu">
+              <a data-toggle="sub-menu" href="/LowTahun">
                 Daftar Pemenang
               </a>
-              <ul className="sub-menu text-center">
-                <li className="menu-item">
-                  <a
-                    href="https://drive.google.com/file/d/1KSSGQePokl7TtijbGsZUDdrGLi0AHxJj/view?usp=drive_link"
-                    target="_blank"
-                  >
-                    &nbsp; &nbsp; Daftar Pemenang 2024
-                  </a>
-                </li>
-                <li className="menu-item">
-                  <a
-                    href="https://drive.google.com/file/d/1qfi4WH9g_dKtAliKvOElrZpyJuyH5WVf/view?usp=sharing"
-                    target="_blank"
-                  >
-                    &nbsp; &nbsp; Daftar Pemenang 2023
-                  </a>
-                </li>
-                <li className="menu-item">
-                  <a
-                    href="https://drive.google.com/file/d/1GGVs9LOiirtrCoXhDK2MCu8Y_E7x-HHH/view?usp=sharing"
-                    target="_blank"
-                  >
-                    &nbsp; &nbsp; Daftar Pemenang 2022
-                  </a>
-                </li>
-              </ul>
             </li>
             <li className="menu-item menu-item-has-children">
               <a data-toggle="sub-menu">

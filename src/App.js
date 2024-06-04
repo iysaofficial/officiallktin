@@ -11,6 +11,9 @@ import FooterComps from "./components/FooterComps";
 
 import Landing from "./Landing";
 
+import Lowtahun from "./pages/low/lowtahun";
+import Jenjang24 from "./pages/low/2024/jenjang24";
+
 function App() {
   return (
     <>
@@ -21,6 +24,8 @@ function App() {
           <Route path="Faq" element={<Faqs />} />
           <Route path="About" element={<About />} />
           <Route path="Contact" element={<Contact />} />
+          <Route path="LowTahun" element={<Lowtahun />} />
+          <Route path="Jenjang24" element={<Jenjang24 />} />
         </Routes>
       </Router>
       <FooterComps />

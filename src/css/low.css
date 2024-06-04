@@ -1,0 +1,11 @@
+.low-section .her .slep {
+    height: auto;
+    width: auto;
+}
+.low-section .wrapper-btn .btn{
+    margin: 1rem;
+    color: #ffff;
+}
+.low-section .wrapper-btn a{
+    font-size: clamp(14px, 1rem + 1vw, 26px);
+}
