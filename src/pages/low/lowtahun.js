@@ -12,15 +12,14 @@ function lowtahun() {
             <a className="btn slep" href="/Jenjang24">2024</a>
             <a
               className="btn slep"
-              href="https://drive.google.com/file/d/1qfi4WH9g_dKtAliKvOElrZpyJuyH5WVf/view?usp=sharing"
-              target="_blank"
+              href="/Kategori23"
             >
               2023
             </a>
             <a
               className="btn slep"
               href="https://drive.google.com/file/d/1GGVs9LOiirtrCoXhDK2MCu8Y_E7x-HHH/view?usp=sharing"
-              target="_blank"
+              target="_blank" rel="noreferrer"
             >
               2022
             </a>
