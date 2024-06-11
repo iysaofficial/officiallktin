@@ -12,7 +12,7 @@ function lowtahun() {
             <a className="btn slep" href="/Jenjang24">2024</a>
             <a
               className="btn slep"
-              href="/Kategori23"
+              href="/Jenjang23"
             >
               2023
             </a>
