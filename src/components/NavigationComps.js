@@ -140,6 +140,7 @@ const NavigationComps = () => {
                   <a
                     href="https://drive.google.com/file/d/1tDzL9ykai1vTqyPZkct1EaC0ZdqsBQA3/view?usp=sharings"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     &nbsp; &nbsp; &nbsp; Pesan Siaran 2024
                   </a>
@@ -155,6 +156,7 @@ const NavigationComps = () => {
                   <a
                     href="https://drive.google.com/drive/folders/1t2OIucLyMyindORVKtKLrG_R4WKik20O?usp=drive_link"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Kurasi 2024
                   </a>
@@ -163,6 +165,7 @@ const NavigationComps = () => {
                   <a
                     href="https://drive.google.com/drive/folders/116iUwWOIHdVH1IgF6Z7ckDvc8CkYzoth"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Kurasi 2023
                   </a>
@@ -171,6 +174,7 @@ const NavigationComps = () => {
                   <a
                     href="https://drive.google.com/drive/folders/1LUmfYpgQ8OUqW1_jBiOIHeBtVHejlJ4o"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Kurasi 2022
                   </a>
@@ -186,6 +190,7 @@ const NavigationComps = () => {
                   <a
                     href="https://drive.google.com/drive/folders/13aMlFhXmtgysid4t2C_pfTprx91Ozm4e?usp=sharing"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Sertifikat Supervisor
                   </a>

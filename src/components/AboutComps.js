@@ -9,28 +9,8 @@ const AboutComps = () => {
         <div className="row ">
         <div className="col-md-6  hero-image text-center">
             <img src="assets/logo/LKTIN.png " className="img-fluid" alt="gambar 1"></img>
-            {/* <QuoteWrapper className="flexCenter darkBg radius8 mx-auto">
-              <QuotesWrapper className="mx-auto"> */}
-                {/* <QuotesIcon /> */}
-              {/* </QuotesWrapper>
-              <div className="mx-auto">
-                <p className="font15 whiteColor mx-auto">
-                  <em>
-                    Silahkan daftarkan team terbaik mu, selamat berlomba dan
-                    juara.
-                  </em>
-                </p>
-                <p
-                  className="font13 orangeColor textRight"
-                  style={{ marginTop: "10px" }}
-                >
-                  IYSA Official
-                </p>
-              </div>
-            </QuoteWrapper> */}
           </div>
           <div className="col-md-6 hero-content mt-auto mb-auto text-center">
-            {/* <h1 className="sub">WELCOME</h1> */}
             <h1 className="">SMART RESEARCHER LKTIN</h1>
             <h2 className="">Lomba Karya Tulis Ilmiah Nasional</h2>
             {/* <p className="">
@@ -50,8 +30,8 @@ const AboutComps = () => {
                 See More
               </a> */}
             <button type="button" class="slep btn-outline-primary mt-3">
-              <a href="/" rel="noreferrer noopener">
-                Segera Hadir 2025
+              <a href="/homeregist" rel="noreferrer noopener">
+                 Klik disini untuk Daftar!!
               </a>
             </button>
           </div>

@@ -15,6 +15,9 @@ import Lowtahun from "./pages/low/lowtahun";
 import Jenjang24 from "./pages/low/2024/jenjang24";
 import Jenjang23 from "./pages/low/2023/jenjang23";
 
+import Homeregist from "./pages/registration/homeregist"
+import Indonesiaparticipants from "./pages/registration/indonesiaparticipants"
+
 function App() {
   return (
     <>
@@ -28,6 +31,8 @@ function App() {
           <Route path="LowTahun" element={<Lowtahun />} />
           <Route path="Jenjang24" element={<Jenjang24 />} />
           <Route path="Jenjang23" element={<Jenjang23 />} />
+          <Route path="homeregist" element={<Homeregist />} />
+          <Route path="indonesiaparticipants" element={<Indonesiaparticipants />} />
         </Routes>
       </Router>
       <FooterComps />
