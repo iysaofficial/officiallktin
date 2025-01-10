@@ -30,7 +30,7 @@ const AboutComps = () => {
                 See More
               </a> */}
             <button type="button" class="slep btn-outline-primary mt-3">
-              <a href="/homeregist" rel="noreferrer noopener">
+              <a href="https://registrasi-lktin-2025.vercel.app/" rel="noreferrer noopener">
                  Klik disini untuk Daftar!!
               </a>
             </button>
