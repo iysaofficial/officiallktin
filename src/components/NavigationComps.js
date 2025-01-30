@@ -131,11 +131,11 @@ const NavigationComps = () => {
                 Daftar Pemenang
               </a>
             </li>
-            <li className="menu-item menu-item-has-children">
+            {/* <li className="menu-item menu-item-has-children">
               <a data-toggle="sub-menu" target='_blank' href="https://drive.google.com/file/d/18ZYy8UNkiJK2eNDx4medaiN29AjlMJR3/view?usp=sharing">
                 Buku Panduan
               </a>
-            </li>
+            </li> */}
             <li className="menu-item menu-item-has-children">
               <a data-toggle="sub-menu">
                 Liputan Media

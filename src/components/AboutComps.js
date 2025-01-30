@@ -29,9 +29,14 @@ const AboutComps = () => {
             {/* <a href="/About" className="btn btn-primary">
                 See More
               </a> */}
-            <button type="button" class="slep btn-outline-primary mt-3">
+            <button type="button" class="slep btn-outline-primary m-3">
               <a href="https://registrasi-lktin-2025.vercel.app/" rel="noreferrer noopener">
                  Klik disini untuk Daftar!!
+              </a>
+            </button>
+            <button type="button" class="slep btn-outline-primary m-3">
+              <a href="https://drive.google.com/file/d/18ZYy8UNkiJK2eNDx4medaiN29AjlMJR3/view?usp=sharing" rel="noreferrer noopener">
+                 Buku Panduan
               </a>
             </button>
           </div>
