@@ -31,7 +31,7 @@ const AboutComps = () => {
               </a> */}
             <button type="button" class="slep btn-outline-primary m-3">
               <a href="/" rel="noreferrer noopener">
-                 Tutup Pendaftaran
+                 Segera Hadir 2026
               </a>
             </button>
             <button type="button" class="slep btn-outline-primary m-3">
