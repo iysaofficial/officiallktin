@@ -9,6 +9,7 @@ function lowtahun() {
           <h1 class="card-header text-center p-3">Daftar Pemenang</h1>
           <h3>Pilih berdasarkan tahun event yang Anda ikuti</h3>
           <div className="wrapper-btn text-center">
+          <a className="btn slep" href="/Jenjang25">2025</a>
             <a className="btn slep" href="/Jenjang24">2024</a>
             <a
               className="btn slep"
