@@ -1,31 +1,31 @@
 // Import CSS
-import '../css/Navigation.css';
+import "../css/Navigation.css";
 
-import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const NavigationComps = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNav = () => {
     setIsOpen(!isOpen);
-    document.body.classList.toggle('hidden-scrolling');
+    document.body.classList.toggle("hidden-scrolling");
   };
 
   const collapseSubMenu = () => {
     const activeSubMenu = document.querySelector(
-      '.menu-item-has-children.active .sub-menu'
+      ".menu-item-has-children.active .sub-menu"
     );
-    activeSubMenu.removeAttribute('style');
-    activeSubMenu.parentElement.classList.remove('active');
+    activeSubMenu.removeAttribute("style");
+    activeSubMenu.parentElement.classList.remove("active");
   };
 
   const resizeFix = () => {
     if (isOpen) {
       toggleNav();
     }
-    if (document.querySelector('.menu-item-has-children.active')) {
+    if (document.querySelector(".menu-item-has-children.active")) {
       collapseSubMenu();
     }
   };
@@ -34,32 +34,29 @@ const NavigationComps = () => {
     const mediaSize = 991;
 
     const handleToggleNav = () => {
-      const navMenu = document.querySelector('.nav-menu');
-      const menuOverlay = document.querySelector('.menu-overlay');
-      navMenu.classList.toggle('open');
-      menuOverlay.classList.toggle('active');
+      const navMenu = document.querySelector(".nav-menu");
+      const menuOverlay = document.querySelector(".menu-overlay");
+      navMenu.classList.toggle("open");
+      menuOverlay.classList.toggle("active");
       toggleNav();
     };
 
     const handleMenuClick = (event) => {
       if (
-        event.target.hasAttribute('data-toggle') &&
+        event.target.hasAttribute("data-toggle") &&
         window.innerWidth <= mediaSize
       ) {
         event.preventDefault();
         const menuItemHasChildren = event.target.parentElement;
-        if (menuItemHasChildren.classList.contains('active')) {
+        if (menuItemHasChildren.classList.contains("active")) {
           collapseSubMenu();
         } else {
-          if (
-            document.querySelector('.menu-item-has-children.active')
-          ) {
+          if (document.querySelector(".menu-item-has-children.active")) {
             collapseSubMenu();
           }
-          menuItemHasChildren.classList.add('active');
-          const subMenu =
-            menuItemHasChildren.querySelector('.sub-menu');
-          subMenu.style.maxHeight = subMenu.scrollHeight + 'px';
+          menuItemHasChildren.classList.add("active");
+          const subMenu = menuItemHasChildren.querySelector(".sub-menu");
+          subMenu.style.maxHeight = subMenu.scrollHeight + "px";
         }
       }
     };
@@ -71,33 +68,33 @@ const NavigationComps = () => {
     };
 
     document
-      .querySelector('.open-nav-menu')
-      .addEventListener('click', handleToggleNav);
+      .querySelector(".open-nav-menu")
+      .addEventListener("click", handleToggleNav);
     document
-      .querySelector('.close-nav-menu')
-      .addEventListener('click', handleToggleNav);
+      .querySelector(".close-nav-menu")
+      .addEventListener("click", handleToggleNav);
     document
-      .querySelector('.menu-overlay')
-      .addEventListener('click', handleToggleNav);
+      .querySelector(".menu-overlay")
+      .addEventListener("click", handleToggleNav);
     document
-      .querySelector('.nav-menu')
-      .addEventListener('click', handleMenuClick);
-    window.addEventListener('resize', handleResize);
+      .querySelector(".nav-menu")
+      .addEventListener("click", handleMenuClick);
+    window.addEventListener("resize", handleResize);
 
     return () => {
       document
-        .querySelector('.open-nav-menu')
-        .removeEventListener('click', handleToggleNav);
+        .querySelector(".open-nav-menu")
+        .removeEventListener("click", handleToggleNav);
       document
-        .querySelector('.close-nav-menu')
-        .removeEventListener('click', handleToggleNav);
+        .querySelector(".close-nav-menu")
+        .removeEventListener("click", handleToggleNav);
       document
-        .querySelector('.menu-overlay')
-        .removeEventListener('click', handleToggleNav);
+        .querySelector(".menu-overlay")
+        .removeEventListener("click", handleToggleNav);
       document
-        .querySelector('.nav-menu')
-        .removeEventListener('click', handleMenuClick);
-      window.removeEventListener('resize', handleResize);
+        .querySelector(".nav-menu")
+        .removeEventListener("click", handleMenuClick);
+      window.removeEventListener("resize", handleResize);
     };
   }, [isOpen]);
 
@@ -137,9 +134,7 @@ const NavigationComps = () => {
               </a>
             </li> */}
             <li className="menu-item menu-item-has-children">
-              <a data-toggle="sub-menu">
-                Liputan Media
-              </a>
+              <a data-toggle="sub-menu">Liputan Media</a>
               <ul className="sub-menu text-center">
                 <li className="menu-item">
                   <a
@@ -149,15 +144,22 @@ const NavigationComps = () => {
                   >
                     &nbsp; &nbsp; &nbsp; Pesan Siaran 2024
                   </a>
-                </li> 
+                </li>
               </ul>
             </li>
             <li className="menu-item menu-item-has-children">
-              <a data-toggle="sub-menu">
-                Kurasi
-              </a>
+              <a data-toggle="sub-menu">Kurasi</a>
               <ul className="sub-menu text-center">
-              <li className="menu-item">
+                <li className="menu-item">
+                  <a
+                    href="https://drive.google.com/drive/folders/1LNyrr0LBNwsZeI_FuVEg0uCUBRVR7__L?usp=sharing"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Kurasi 2025
+                  </a>
+                </li>
+                <li className="menu-item">
                   <a
                     href="https://drive.google.com/drive/folders/1t2OIucLyMyindORVKtKLrG_R4WKik20O?usp=drive_link"
                     target="_blank"
@@ -187,11 +189,9 @@ const NavigationComps = () => {
               </ul>
             </li>
             <li className="menu-item menu-item-has-children">
-              <a data-toggle="sub-menu">
-                Sertifikat
-              </a>
+              <a data-toggle="sub-menu">Sertifikat</a>
               <ul className="sub-menu text-center">
-              <li className="menu-item">
+                <li className="menu-item">
                   <a
                     href="https://drive.google.com/drive/folders/1WJpkcjNhwuGm4F4ofFL5i6dwjDlJRpdi?usp=sharing"
                     target="_blank"
