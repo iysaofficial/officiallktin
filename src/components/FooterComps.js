@@ -53,12 +53,12 @@ const FooterComps = () => {
           <br></br>
           <br></br>
           <a
-            href="https://wa.me/+6281770914129"
+            href="https://wa.me/+6288213248890 "
             target="_blank"
             rel="noreferrer"
             className="office "
           >
-            +62 817 7091 4129
+            +62 882-1324-8890
           </a>
         </div>
         <div className="colFooter">

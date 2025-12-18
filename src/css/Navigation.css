@@ -13,7 +13,6 @@ a {
   position: fixed;
   width: 100%;
   z-index: 99999;
-  margin-top: -3rem;
 }
 
 .header-main {

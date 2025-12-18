@@ -4,15 +4,16 @@ import React from "react";
 
 const AboutComps = () => {
   return (
-    <section className="her mt-5">
+    <section className="her">
       <div className="container">
         <div className="row ">
         <div className="col-md-6  hero-image text-center">
             <img src="assets/logo/LKTIN.png " className="img-fluid" alt="gambar 1"></img>
           </div>
           <div className="col-md-6 hero-content mt-auto mb-auto text-center">
+            <h1 className="">Dibuka Pendaftaran</h1>
             <h1 className="">SMART RESEARCHER LKTIN</h1>
-            <h2 className="">Lomba Karya Tulis Ilmiah Nasional</h2>
+            <h2 className="">Lomba Karya Tulis Ilmiah Nasional 2026</h2>
             {/* <p className="">
                 Indonesian Young Scientist Association (IYSA) is an institution
                 engaged in developing Indonesian students potential, talents, and
@@ -30,8 +31,8 @@ const AboutComps = () => {
                 See More
               </a> */}
             <button type="button" class="slep btn-outline-primary m-3">
-              <a href="/" rel="noreferrer noopener">
-                 Segera Hadir 2026
+              <a href="/homeindo" rel="noreferrer noopener">
+                 Daftar disini!!
               </a>
             </button>
             <button type="button" class="slep btn-outline-primary m-3">

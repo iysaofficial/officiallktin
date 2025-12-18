@@ -1,12 +1,25 @@
+import React from "react";
+import "../../css/registration.css";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Navigation from "../../components/NavigationComps";
+import Footer from "../../components/FooterComps";
 
-export default function Indonesiaparticipants() {
+function IndonesiaOnline() {
   const [selectedMaxNamaLengkap, setselectedMaxNamaLengkap] = useState("");
   const maxNameChars = 180; // batasan maksimal karakter
   const [selectedMaxProject, setselectedMaxProject] = useState("");
+  const [selectedNamaSekolah, setselectedNamaSekolah] = useState("");
+  const maxSchoolChars = 500; // batasan maksimal karakter
   const maxProjectChars = 160; // batasan maksimal karakter
-  const [setSelectedCategory] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
   const [categoryPrice, setCategoryPrice] = useState("");
+  const [statusMessage, setStatusMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [countdown, setCountdown] = useState(5);
+  const [canClick, setCanClick] = useState(false);
+  const navigate = useNavigate();
 
   const handleInputNameChange = (e) => {
     const { value } = e.target;
@@ -15,20 +28,10 @@ export default function Indonesiaparticipants() {
     }
   };
 
-  const handleCategoryChange = (e) => {
-    const value = e.target.value;
-    setSelectedCategory(value);
-    
-    switch (value) {
-      case "Sains":
-        setCategoryPrice("Rp 950.000");
-        break;
-      case "Social":
-        setCategoryPrice("Rp 950.000");
-        break;
-      default:
-        setCategoryPrice("");
-        break;
+  const handleInputNameSchoolChange = (e) => {
+    const { value } = e.target;
+    if (value.length <= maxSchoolChars) {
+      setselectedNamaSekolah(value);
     }
   };
 
@@ -39,49 +42,115 @@ export default function Indonesiaparticipants() {
     }
   };
 
-  useEffect(() => {
-    const scriptURL = "https://script.google.com/macros/s/AKfycbyYprFWo8Muj-OsjciMgpdY0_BccCYeM05JDtUntwGV_gBzxVIaMoZqu6owlPBMkydL/exec";
+  const handleCategoryChange = (e) => {
+    const value = e.target.value;
+    setSelectedCategory(value);
 
+    // Logika untuk menentukan harga berdasarkan kategori yang dipilih
+    switch (value) {
+      case "Lomba Karya Tulis Ilmiah Nasional - Kompetisi Daring":
+        setCategoryPrice("RP 350.000");
+        break;
+      default:
+        break;
+    }
+  };
+
+  useEffect(() => {
+    const termsAccepted = sessionStorage.getItem("termsAccepted");
+    if (!termsAccepted) {
+      alert("You must agree to the Terms & Conditions first.");
+      navigate("/homeindo"); // Navigasi ke halaman HomeIndo
+    }
+  }, [navigate]);
+
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbx33QoOyVQValpTh04Cdp8i5rl2vLDZ7fEkQMwhW6VSQTxvtIUeSbeYpchEc8lpVAt5/exec";
+
+  useEffect(() => {
     const form = document.forms["regist-form"];
-    var buttonCounter = 0;
 
     if (form) {
       const handleSubmit = async (e) => {
         e.preventDefault();
-        if (buttonCounter === 0) {
-          try {
-            buttonCounter++;
-            await fetch(scriptURL, {
-              method: "POST",
-              body: new FormData(form),
-            });
-            // Setelah berhasil mengirim data, arahkan pengguna ke halaman lain
-            window.location.href = "/homeregist"; // Gantikan dengan URL halaman sukses Anda
-          } catch (error) {
-            console.error("Error saat mengirim data:", error);
-            // Handle error jika diperlukan
+        setShowModal(true);
+        setCanClick(false);
+        setCountdown(5); // Set ulang countdown saat modal muncul
+
+        let count = 5;
+        const interval = setInterval(() => {
+          count -= 1;
+          setCountdown(count);
+
+          if (count <= 1) {
+            clearInterval(interval); // Hentikan countdown di angka 1
+            setCanClick(true);
           }
-        }
-        form.reset();
+        }, 1000);
       };
+
       form.addEventListener("submit", handleSubmit);
-      // Membersihkan event listener saat komponen dilepas
       return () => {
         form.removeEventListener("submit", handleSubmit);
       };
     }
   }, []);
 
+  const handleConfirmSubmit = async () => {
+    setShowModal(false); // Tutup modal
+    const form = document.forms["regist-form"];
+
+    if (!form) return;
+
+    setIsLoading(true);
+    try {
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        body: new FormData(form),
+      });
+
+      if (response.ok) {
+        setStatusMessage("Data berhasil dikirim!");
+
+        // Ambil data sebelum reset
+        const formData = {
+          namaLengkap: selectedMaxNamaLengkap,
+          projectTitle: selectedMaxProject,
+          category: selectedCategory,
+          categoryPrice: categoryPrice,
+          namasekolah: selectedNamaSekolah,
+        };
+
+        form.reset();
+        setTimeout(() => {
+          navigate(
+            `/thankyou?namaLengkap=${encodeURIComponent(selectedMaxNamaLengkap)}
+              &projectTitle=${encodeURIComponent(selectedMaxProject)}
+              &category=${encodeURIComponent(selectedCategory)}
+              &namasekolah=${encodeURIComponent(selectedNamaSekolah)}`
+          );
+        }, 1000);
+      } else {
+        setStatusMessage("Terjadi kesalahan saat mengirim data.");
+      }
+    } catch (error) {
+      setStatusMessage("Terjadi kesalahan saat mengirim data.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <>
-      <section className="registration-section her mt-5">
-        <div className="container">
-          <div className="content">
-            <h1 className="garis-bawah sub">FORMULIR PENDAFTARAN</h1>
-            {/* <h1 className=""></h1> */}
-            <br></br>
+      <Navigation />
+      <section className="registration-section">
+        <div class="container">
+          <div class="content">
+            <div class="garis-bawah sub">FORMULIR PENDAFTARAN</div>
+            <br />
+            <br />
             <h4>
-              HALLO PESERTA LKTIN 2025, Mohon perhatikan informasi berikut ini
+              HALLO PESERTA LKTIN 2026, Mohon perhatikan informasi berikut ini
               sebelum mengisi formulir pendaftaran :
             </h4>
             <br />
@@ -103,10 +172,44 @@ export default function Indonesiaparticipants() {
               waktu pendaftaran, Letter of Acceptance (LOA) akan dikirimkan ke
               alamat email team leader.
             </p>
-            <br></br>
+            <br />
+
+            {showModal && (
+              <div className="modal-overlay-submit">
+                <div className="modal-submit text-lg-center text-md-center">
+                  <h2 className="text-center">⚠️PERHATIAN!</h2>
+                  <p>
+                    Data yang sudah dikirim tidak dapat diubah kembali. Panitia
+                    akan menggunakan data terakhir yang masuk untuk pencetakan
+                    sertifikat.
+                    <br />
+                    <b>PASTIKAN SELURUH DATA SUDAH BENAR!</b>
+                    <br />
+                    <b>
+                      JANGAN MENDAFTAR ULANG DENGAN DATA YANG SAMA BERKALI-KALI!
+                    </b>
+                  </p>
+                  <div className="modal-buttons-submit">
+                    <button onClick={() => setShowModal(false)}>Kembali</button>
+                    <button
+                      onClick={handleConfirmSubmit}
+                      disabled={!canClick || isLoading}
+                    >
+                      {isLoading
+                        ? "Mengirim..."
+                        : canClick
+                        ? "Lanjutkan"
+                        : `Tunggu... ${countdown}`}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
 
             <form name="regist-form">
-              <h1 className="garis-bawah">BIODATA</h1>
+              <h1 className="garis-bawah text-sm md:text-lg lg:text-5xl">
+                BIODATA
+              </h1>
               <div className="user-details">
                 <div className="input-box">
                   <label className="form-label" value="Peserta Indonesia">
@@ -118,9 +221,28 @@ export default function Indonesiaparticipants() {
                     name="CATEGORY_PARTICIPANT"
                     className="form-control"
                     placeholder="Choose Categories Participant"
-                    value="PESERTA INDONESIA"
+                    value="INDONESIA"
                     readOnly
                   />
+                </div>
+                <div class="input-box">
+                  <label for="CATEGORY_COMPETITION" class="form-label">
+                    Kategori Kompetisi
+                  </label>
+                  <select
+                    type="text"
+                    id="CATEGORY_COMPETITION"
+                    name="CATEGORY_COMPETITION"
+                    class="form-control"
+                    placeholder="Choose Category Competition "
+                    onChange={handleCategoryChange}
+                    required
+                  >
+                    <option value="">--Pilih Kategori Kompetisi--</option>
+                    <option value="Lomba Karya Tulis Ilmiah Nasional - Kompetisi Daring">
+                      Kompetisi Daring
+                    </option>
+                  </select>
                 </div>
               </div>
 
@@ -134,10 +256,10 @@ export default function Indonesiaparticipants() {
                       Masukan nama ketua dan anggota tim dengan nama ketua tim
                       diawal, dengan format seperti berikut :
                     </p>
-                    <p>Note : maksimal 5 anggota + 1 ketua tim</p>
-                    <h6>Kamal Putra</h6>
-                    <h6>Ranu Ramadhan</h6>
-                    <h6>Irsyad Zaidan</h6>
+                    <p>Note : maksimal 2 anggota + 1 ketua tim</p>
+                    <h6>Adrian Simatupang</h6>
+                    <h6>Pangeran Hasanudin</h6>
+                    <h6>Irsyad Zaidan Kusuma</h6>
                   </label>
                   <textarea
                     type="text"
@@ -176,8 +298,8 @@ export default function Indonesiaparticipants() {
                     required
                   />
                 </div>
-                <div className="input-box">
-                  <label for="LEADER_EMAIL" className="form-label">
+                <div class="input-box">
+                  <label for="LEADER_EMAIL" class="form-label">
                     Alamat Email Ketua Tim
                   </label>
                   <label>
@@ -191,8 +313,8 @@ export default function Indonesiaparticipants() {
                     type="email"
                     id="LEADER_EMAIL"
                     name="LEADER_EMAIL"
-                    className="form-control"
-                    placeholder="Masukan Alamat Email Ketua Tim"
+                    class="form-control"
+                    placeholder="Masukan Alamat Email ketua Tim"
                     required
                   />
                 </div>
@@ -222,7 +344,9 @@ export default function Indonesiaparticipants() {
 
               {/* DATA SEKOLAH START */}
               {/* DATA SEKOLAH START */}
-              <h1 className="garis-bawah">DATA SEKOLAH</h1>
+              <h1 className="garis-bawah text-sm md:text-lg lg:text-5xl">
+                DATA SEKOLAH
+              </h1>
               <div className="user-details">
                 <div className="input-box">
                   <label htmlFor="NAMA_SEKOLAH" className="form-label">
@@ -245,7 +369,12 @@ export default function Indonesiaparticipants() {
                     className="form-control"
                     placeholder="Masukan Nama Sekolah/Universitas Anda"
                     required
+                    value={selectedNamaSekolah}
+                    onChange={handleInputNameSchoolChange}
                   ></textarea>
+                  <p>
+                    {selectedNamaSekolah.length} / {maxSchoolChars} character
+                  </p>
                 </div>
                 <div className="input-box">
                   <label for="NPSN" className="form-label">
@@ -282,12 +411,11 @@ export default function Indonesiaparticipants() {
                     required
                   >
                     <option value="">--Pilih Jenjang Pendidikan Anda--</option>
-                    <option value="Sekolah Dasar">Sekolah Dasar</option>
-                    <option value="Sekolah Menengah Pertama">
-                      Sekolah Menengah Pertama
+                    <option value="Sekolah Dasar">
+                      Sekolah Dasar (SD dan sederajat)
                     </option>
-                    <option value="Sekolah Menengah Atas">
-                      Sekolah Menengah Atas
+                    <option value="Sekolah Menengah">
+                      Sekolah Menengah (SMP, SMA, MA dan sederajat)
                     </option>
                     <option value="Universitas">Universitas</option>
                   </select>
@@ -311,17 +439,19 @@ export default function Indonesiaparticipants() {
 
               {/* DATA PEMBIMBING START */}
               {/* DATA PEMBIMBING START */}
-              <h1 className="garis-bawah">DATA PEMBIMBING</h1>
+              <h1 className="garis-bawah text-sm md:text-lg lg:text-5xl">
+                DATA PEMBIMBING
+              </h1>
               <div className="user-details">
-                <div className="input-box">
-                  <label for="NAME_SUPERVISOR" className="form-label">
+                <div class="input-box">
+                  <label for="NAME_SUPERVISOR" class="form-label">
                     Nama Guru/Pembimbing
                   </label>
                   <textarea
                     type="text"
                     id="NAME_SUPERVISOR"
                     name="NAME_SUPERVISOR"
-                    className="form-control"
+                    class="form-control"
                     placeholder="Masukan Nama Guru/Pembimbing"
                     required
                   ></textarea>
@@ -370,10 +500,11 @@ export default function Indonesiaparticipants() {
               {/* DETAIL PROJECT START */}
               {/* DETAIL PROJECT START */}
               <div className="">
-                <h1 className="garis-bawah">DETAIL PROYEK</h1>
+                <h1 className="garis-bawah text-sm md:text-lg lg:text-5xl">
+                  DETAIL PROYEK
+                </h1>
               </div>
               <div className="user-details">
-                {/* Input Judul Proyek */}
                 <div className="input-box">
                   <label for="PROJECT_TITLE" className="form-label">
                     Judul Proyek
@@ -408,19 +539,17 @@ export default function Indonesiaparticipants() {
                     id="CATEGORIES"
                     name="CATEGORIES"
                     className="form-control"
+                    placeholder="--Choose-- "
                     required
-                    onChange={handleCategoryChange}
                   >
                     <option value="">--Pilih Kategori--</option>
                     <option value="Sains">Sains</option>
-                    <option value="Social">Social</option>
+                    <option value="Sosial ">Sosial</option>
                   </select>
                 </div>
 
-
-                {/* Input Lainnya */}
                 <div className="input-box">
-                  <label htmlFor="YES_NO" className="form-label">
+                  <label for="YES_NO" className="form-label">
                     Apakah judul proyek pernah berpartisipasi dalam kompetisi
                     penemuan dan inovasi sebelumnya?
                   </label>
@@ -429,6 +558,7 @@ export default function Indonesiaparticipants() {
                     id="YES_NO"
                     name="YES_NO"
                     className="form-control"
+                    placeholder="--Choose Information Resources-- "
                     required
                   >
                     <option>--Pilih--</option>
@@ -439,7 +569,7 @@ export default function Indonesiaparticipants() {
 
                 <div className="input-box">
                   <label
-                    htmlFor="JUDUL_PERNAH_BERPATISIPASI"
+                    for="JUDUL_PERNAH_BERPATISIPASI"
                     className="form-label"
                   >
                     Jika judul proyek pernah mengikuti kompetisi invensi dan
@@ -450,8 +580,9 @@ export default function Indonesiaparticipants() {
                     id="JUDUL_PERNAH_BERPATISIPASI"
                     name="JUDUL_PERNAH_BERPATISIPASI"
                     className="form-control"
-                    placeholder="Masukkan Nama Kompetisinya"
+                    placeholder="Masukan Nama Kompetisinya"
                   ></textarea>
+                  <div className="mt-5" id="form_alerts"></div>
                 </div>
 
                 {/* Kolom Harga */}
@@ -476,7 +607,9 @@ export default function Indonesiaparticipants() {
               {/* GENERAL INFORMATION START */}
               {/* GENERAL INFORMATION START */}
               <div className="">
-                <h1 className="garis-bawah">INFORMASI UMUM</h1>
+                <h1 className="garis-bawah text-sm md:text-lg lg:text-5xl">
+                  INFORMASI UMUM
+                </h1>
               </div>
               <div className="user-details">
                 <div className="input-box">
@@ -500,7 +633,7 @@ export default function Indonesiaparticipants() {
                 </div>
                 <div className="input-box">
                   <label for="INFORMATION_RESOURCES" className="form-label">
-                    Sumber Informasi Kompetisi LKTIN 2025
+                    Sumber Informasi Kompetisi LKTIN 2026
                   </label>
                   <select
                     type="text"
@@ -511,15 +644,15 @@ export default function Indonesiaparticipants() {
                     required
                   >
                     <option value="">--Pilih Sumber Informasi--</option>
+                    <option value="LKTIN Website">LKTIN Website</option>
+                    <option value="IYSA Website">IYSA Website</option>
                     <option value="IYSA Instagram">IYSA Instagram</option>
                     <option value="LKTIN Instagram">LKTIN Instagram</option>
                     <option value="Pembimbing/Sekolah">
                       Pembimbing/Sekolah
                     </option>
-                    <option value="IYSA FaceBook">IYSA FaceBook</option>
+                    <option value="IYSA Facebook">IYSA Facebook</option>
                     <option value="IYSA Linkedin">IYSA Linkedin</option>
-                    <option value="IYSA Website">IYSA Website</option>
-                    <option value="LKTIN Website">LKTIN Website</option>
                     <option value="IYSA Email">IYSA Email</option>
                     <option value="LKTIN Email">LKTIN Email</option>
                     <option value="Acara Sebelumnya">Acara Sebelumnya</option>
@@ -528,7 +661,9 @@ export default function Indonesiaparticipants() {
                 </div>
                 <div className="input-box">
                   <label for="FILE" className="form-label">
-                    Upload Extended Abstract{" "}
+                    Jika Anda mendapatkan pendaftaran gratis dari acara
+                    sebelumnya atau kegiatan kunjungan sekolah sebelumnya, harap
+                    lampirkan bukti dokumentasi{" "}
                   </label>
                   <input
                     type="url"
@@ -541,13 +676,28 @@ export default function Indonesiaparticipants() {
               </div>
               {/* GENERAL INFORMATION END */}
               {/* GENERAL INFORMATION END */}
+
               <div className="button">
                 <input type="submit" value="KIRIM" />
               </div>
             </form>
+
+            {/* Loader dan Status Message */}
+            {isLoading && (
+              <div className="overlay-loader">
+                <div className="loader"></div>
+                <div>
+                  {statusMessage && (
+                    <p className="status-message">{statusMessage}</p>
+                  )}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
     </>
   );
 }
+
+export default IndonesiaOnline;
