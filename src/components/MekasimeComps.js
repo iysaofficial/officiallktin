@@ -37,10 +37,10 @@ const MekanismeComps = () => {
               <p className="font16">
                 3. Berkas yang masuk akan dinilai oleh dewan juri.
               </p>
-              <p className="font16">
+              {/* <p className="font16">
                 4. Presentasi akan dilaksanakan pada tanggal 28
                 Februari 2024.
-              </p>
+              </p> */}
             </AddRight>
           </Advertising>
         </div>

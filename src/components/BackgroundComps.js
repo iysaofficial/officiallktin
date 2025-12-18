@@ -15,8 +15,7 @@ const BackgroundComps = () => {
           skills yang dimiliki serta menumbuhkan jiwa kompetisi dalam
           diri mereka. Hal ini kami lakukan untuk menciptakan
           perbaikan kehidupan. Karena, kami yakin bahwa setiap orang
-          memiliki potensi yang dapat dikembangkan. IYSA bersama dengan
-          Departemen Aktuaria ITS akan kembali menyelenggarakan event LKTIN Smart Researcher 2025.
+          memiliki potensi yang dapat dikembangkan.
         </p>
         <p class="card-text">
           LKTIN Smart Researcher merupakan salah satu kegiatan
