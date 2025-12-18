@@ -1,5 +1,5 @@
 import "../css/About.css";
-import styled from "styled-components";
+// import styled from "styled-components";
 import React from "react";
 
 const AboutComps = () => {
@@ -36,7 +36,7 @@ const AboutComps = () => {
               </a>
             </button>
             <button type="button" class="slep btn-outline-primary m-3">
-              <a href="https://drive.google.com/file/d/18ZYy8UNkiJK2eNDx4medaiN29AjlMJR3/view?usp=sharing" rel="noreferrer noopener">
+              <a href="https://drive.google.com/file/d/1tGTA9Gizlb7k5I1VtzLo_mZ8HU52lyrs/view?usp=sharing" target="_blank" rel="noreferrer noopener">
                  Buku Panduan
               </a>
             </button>
