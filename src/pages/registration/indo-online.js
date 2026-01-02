@@ -411,9 +411,9 @@ function IndonesiaOnline() {
                     required
                   >
                     <option value="">--Pilih Jenjang Pendidikan Anda--</option>
-                    <option value="Sekolah Dasar">
+                    {/* <option value="Sekolah Dasar">
                       Sekolah Dasar (SD dan sederajat)
-                    </option>
+                    </option> */}
                     <option value="Sekolah Menengah">
                       Sekolah Menengah (SMP, SMA, MA dan sederajat)
                     </option>
