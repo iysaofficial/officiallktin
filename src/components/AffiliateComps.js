@@ -25,11 +25,11 @@ const AffiliateComps = () => {
                   className=" image-iysa m-4"
                   alt="gallery"
                 />
-                {/* <img
-                  src="./assets/logo/aff4.svg"
+                <img
+                  src="./assets/logo/Next generation knowledge logo.jpg"
                   className=" image-prestasididik m-4"
                   alt="gallery"
-                /> */}
+                />
               </div>
             </div>
           </div>
