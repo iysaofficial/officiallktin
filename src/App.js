@@ -17,7 +17,7 @@ import Jenjang23 from "./pages/low/2023/jenjang23";
 import Jenjang25 from "./pages/low/2025/jenjang25";
 
 import Homeindo from "./pages/registration/homeindo"
-import Indonesiaparticipants from "./pages/registration/indo-online"
+import Indonesiaparticipants from "./pages/registration/indo-online";
 import Thankyou from "./pages/registration/thankyou";
 
 function App() {

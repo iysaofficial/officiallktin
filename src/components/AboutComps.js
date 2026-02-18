@@ -31,6 +31,11 @@ const AboutComps = () => {
                 See More
               </a> */}
             <button type="button" class="slep btn-outline-primary m-3">
+              <a href="#!" rel="noreferrer noopener">
+                 Pendaftaran ditutup
+              </a>
+            </button>
+            {/* <button type="button" class="slep btn-outline-primary m-3">
               <a href="/homeindo" rel="noreferrer noopener">
                  Daftar disini!!
               </a>
@@ -39,7 +44,7 @@ const AboutComps = () => {
               <a href="https://drive.google.com/file/d/1tGTA9Gizlb7k5I1VtzLo_mZ8HU52lyrs/view?usp=sharing" target="_blank" rel="noreferrer noopener">
                  Buku Panduan
               </a>
-            </button>
+            </button> */}
           </div>
 
         

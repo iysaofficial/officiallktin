@@ -3,7 +3,6 @@ import "../../css/registration.css";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navigation from "../../components/NavigationComps";
-import Footer from "../../components/FooterComps";
 
 function IndonesiaOnline() {
   const [selectedMaxNamaLengkap, setselectedMaxNamaLengkap] = useState("");
@@ -56,14 +55,6 @@ function IndonesiaOnline() {
     }
   };
 
-  useEffect(() => {
-    const termsAccepted = sessionStorage.getItem("termsAccepted");
-    if (!termsAccepted) {
-      alert("You must agree to the Terms & Conditions first.");
-      navigate("/homeindo"); // Navigasi ke halaman HomeIndo
-    }
-  }, [navigate]);
-
   const scriptURL =
     "https://script.google.com/macros/s/AKfycbx33QoOyVQValpTh04Cdp8i5rl2vLDZ7fEkQMwhW6VSQTxvtIUeSbeYpchEc8lpVAt5/exec";
 
@@ -113,13 +104,13 @@ function IndonesiaOnline() {
         setStatusMessage("Data berhasil dikirim!");
 
         // Ambil data sebelum reset
-        const formData = {
-          namaLengkap: selectedMaxNamaLengkap,
-          projectTitle: selectedMaxProject,
-          category: selectedCategory,
-          categoryPrice: categoryPrice,
-          namasekolah: selectedNamaSekolah,
-        };
+        // const formData = {
+        //   namaLengkap: selectedMaxNamaLengkap,
+        //   projectTitle: selectedMaxProject,
+        //   category: selectedCategory,
+        //   categoryPrice: categoryPrice,
+        //   namasekolah: selectedNamaSekolah,
+        // };
 
         form.reset();
         setTimeout(() => {
