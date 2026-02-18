@@ -54,7 +54,7 @@ function ThankYouIndo() {
           </strong>
         </p>
         <Link to="/homeindo" legacyBehavior>
-          <a className="btn btn-custom">Kembali ke menu pendaftaran</a>
+          <a href="/homeindo" className="btn btn-custom">Kembali ke menu pendaftaran</a>
         </Link>
       </div>
     </div>

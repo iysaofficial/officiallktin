@@ -7,7 +7,7 @@ const CategoryComps = () => {
       {/* <h2 className="garis-bawah"></h2> */}
       <div class="all-products">
         <div class="product gap-2">
-          <img src="./assets/logo/science.png" />
+          <img src="./assets/logo/science.png" alt="science" />
           <div class="product-info">
             <h4 class="product-title">Science</h4>
           </div>
@@ -19,7 +19,7 @@ const CategoryComps = () => {
           </div>
         </div> */}
         <div class="product">
-          <img src="./assets/logo/Envi.WebP" />
+          <img src="./assets/logo/Envi.WebP" alt="social" />
           <div class="product-info">
             <h4 class="product-title">Social</h4>
           </div>

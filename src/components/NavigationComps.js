@@ -1,17 +1,17 @@
 // Import CSS
 import "../css/Navigation.css";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const NavigationComps = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleNav = () => {
+  const toggleNav = useCallback(() => {
     setIsOpen(!isOpen);
     document.body.classList.toggle("hidden-scrolling");
-  };
+  }, [isOpen]);
 
   const collapseSubMenu = () => {
     const activeSubMenu = document.querySelector(
@@ -21,14 +21,14 @@ const NavigationComps = () => {
     activeSubMenu.parentElement.classList.remove("active");
   };
 
-  const resizeFix = () => {
+  const resizeFix = useCallback(() => {
     if (isOpen) {
       toggleNav();
     }
     if (document.querySelector(".menu-item-has-children.active")) {
       collapseSubMenu();
     }
-  };
+  }, [isOpen, toggleNav]);
 
   useEffect(() => {
     const mediaSize = 991;
@@ -96,7 +96,7 @@ const NavigationComps = () => {
         .removeEventListener("click", handleMenuClick);
       window.removeEventListener("resize", handleResize);
     };
-  }, [isOpen]);
+  }, [isOpen, resizeFix, toggleNav]);
 
   return (
     <header className="header">
@@ -134,7 +134,7 @@ const NavigationComps = () => {
               </a>
             </li> */}
             <li className="menu-item menu-item-has-children">
-              <a data-toggle="sub-menu">Liputan Media</a>
+              <a href="/#" data-toggle="sub-menu">Liputan Media</a>
               <ul className="sub-menu text-center">
                 <li className="menu-item">
                   <a
@@ -148,7 +148,7 @@ const NavigationComps = () => {
               </ul>
             </li>
             <li className="menu-item menu-item-has-children">
-              <a data-toggle="sub-menu">Kurasi</a>
+              <a href="/#" data-toggle="sub-menu">Kurasi</a>
               <ul className="sub-menu text-center">
                 <li className="menu-item">
                   <a
@@ -189,7 +189,7 @@ const NavigationComps = () => {
               </ul>
             </li>
             <li className="menu-item menu-item-has-children">
-              <a data-toggle="sub-menu">Sertifikat</a>
+              <a href="/#" data-toggle="sub-menu">Sertifikat</a>
               <ul className="sub-menu text-center">
                 <li className="menu-item">
                   <a
