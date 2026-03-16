@@ -13,7 +13,7 @@ const AboutComps = () => {
           <div className="col-md-6 hero-content mt-auto mb-auto text-center">
             <h1 className="">Dibuka Pendaftaran</h1>
             <h1 className="">SMART RESEARCHER LKTIN</h1>
-            <h2 className="">Lomba Karya Tulis Ilmiah Nasional 2026</h2>
+            <h2 className="">Lomba Karya Tulis Ilmiah Nasional</h2>
             {/* <p className="">
                 Indonesian Young Scientist Association (IYSA) is an institution
                 engaged in developing Indonesian students potential, talents, and

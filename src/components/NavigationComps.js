@@ -138,6 +138,13 @@ const NavigationComps = () => {
               <ul className="sub-menu text-center">
                 <li className="menu-item">
                   <a
+                    href="https://docs.google.com/document/d/1Lh6xeE1XBWMMVwHjTeaUw2wn8yXs99AYsJjSC2Nr-PE/edit?usp=drive_link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    &nbsp; &nbsp; &nbsp; Pesan Siaran 2026
+                  </a>
+                  <a
                     href="https://drive.google.com/file/d/1tDzL9ykai1vTqyPZkct1EaC0ZdqsBQA3/view?usp=sharings"
                     target="_blank"
                     rel="noreferrer"
