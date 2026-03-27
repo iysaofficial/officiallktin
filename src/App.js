@@ -15,6 +15,7 @@ import Lowtahun from "./pages/low/lowtahun";
 import Jenjang24 from "./pages/low/2024/jenjang24";
 import Jenjang23 from "./pages/low/2023/jenjang23";
 import Jenjang25 from "./pages/low/2025/jenjang25";
+import Jenjang26 from "./pages/low/2026/jenjang26";
 
 import Homeindo from "./pages/registration/homeindo"
 import Indonesiaparticipants from "./pages/registration/indo-online";
@@ -31,6 +32,7 @@ function App() {
           <Route path="About" element={<About />} />
           <Route path="Contact" element={<Contact />} />
           <Route path="LowTahun" element={<Lowtahun />} />
+          <Route path="Jenjang26" element={<Jenjang26 />} />
           <Route path="Jenjang25" element={<Jenjang25 />} />
           <Route path="Jenjang24" element={<Jenjang24 />} />
           <Route path="Jenjang23" element={<Jenjang23 />} />
