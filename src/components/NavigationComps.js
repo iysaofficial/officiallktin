@@ -159,6 +159,15 @@ const NavigationComps = () => {
               <ul className="sub-menu text-center">
                 <li className="menu-item">
                   <a
+                    href="https://drive.google.com/drive/folders/1Er4CtpsEJO8sroJC-CaD4GkG2PemWqVQ?usp=sharing"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Kurasi 2026
+                  </a>
+                </li>
+                <li className="menu-item">
+                  <a
                     href="https://drive.google.com/drive/folders/1LNyrr0LBNwsZeI_FuVEg0uCUBRVR7__L?usp=sharing"
                     target="_blank"
                     rel="noreferrer"
