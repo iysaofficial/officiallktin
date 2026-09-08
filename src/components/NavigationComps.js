@@ -128,11 +128,40 @@ const NavigationComps = () => {
                 Daftar Pemenang
               </a>
             </li>
-            {/* <li className="menu-item menu-item-has-children">
-              <a data-toggle="sub-menu" target='_blank' href="https://drive.google.com/file/d/18ZYy8UNkiJK2eNDx4medaiN29AjlMJR3/view?usp=sharing">
+            <li className="menu-item menu-item-has-children">
+              <a href="/#" data-toggle="sub-menu">
                 Buku Panduan
               </a>
-            </li> */}
+              <ul className="sub-menu text-center">
+                <li className="menu-item">
+                  <a
+                    href="https://drive.google.com/file/d/1tGTA9Gizlb7k5I1VtzLo_mZ8HU52lyrs/view?usp=sharing"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Buku Panduan 2026
+                  </a>
+                </li>
+                <li className="menu-item">
+                  <a
+                    href="https://drive.google.com/file/d/1deauaulYTL3Yt1AhUrMpD4POj-4alVJR/view?usp=sharing"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Buku Panduan 2025
+                  </a>
+                </li>
+                <li className="menu-item">
+                  <a
+                    href="https://drive.google.com/file/d/1sgjtRWjIthPls0cjQ4iKcYVoxY0l4alC/view?usp=sharing"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Buku Panduan 2024
+                  </a>
+                </li>
+              </ul>
+            </li>
             <li className="menu-item menu-item-has-children">
               <a href="/#" data-toggle="sub-menu">Liputan Media</a>
               <ul className="sub-menu text-center">
