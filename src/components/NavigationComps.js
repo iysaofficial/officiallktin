@@ -4,8 +4,11 @@ import "../css/Navigation.css";
 import React, { useState, useEffect, useCallback } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { usePendaftaran, SERI } from "../lib/pendaftaran";
 
 const NavigationComps = () => {
+  // Guidebook edisi berjalan dari dasbor (hanya bila sudah diterbitkan).
+  const { identitas, guidebook } = usePendaftaran();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNav = useCallback(() => {
@@ -133,6 +136,18 @@ const NavigationComps = () => {
                 Buku Panduan
               </a>
               <ul className="sub-menu text-center">
+                {guidebook && (
+                  <li className="menu-item">
+                    <a href={guidebook.url} target="_blank" rel="noreferrer" data-iysa-panduan={SERI}>
+                      Buku Panduan {identitas?.tahun}
+                    </a>
+                  </li>
+                )}
+                <li className="menu-item">
+                  <a href="#syarat-ketentuan" data-iysa-panduan={SERI} data-iysa-panduan-jenis="tnc">
+                    Syarat &amp; Ketentuan
+                  </a>
+                </li>
                 <li className="menu-item">
                   <a
                     href="https://drive.google.com/file/d/1tGTA9Gizlb7k5I1VtzLo_mZ8HU52lyrs/view?usp=sharing"

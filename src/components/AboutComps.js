@@ -1,11 +1,11 @@
 import "../css/About.css";
 // import styled from "styled-components";
 import React from "react";
-import { usePendaftaran, formatTanggal } from "../lib/pendaftaran";
+import { usePendaftaran, formatTanggal, SERI } from "../lib/pendaftaran";
 
 const AboutComps = () => {
   // Judul dan tombol mengikuti togel pendaftaran di dasbor IYSA.
-  const { memuat, identitas, keadaan } = usePendaftaran();
+  const { memuat, identitas, keadaan, guidebook } = usePendaftaran();
   const tahun = identitas?.tahun ?? "2027";
   const label = memuat
     ? "Memuat…"
@@ -49,6 +49,14 @@ const AboutComps = () => {
                  {label}
               </a>
             </button>
+            {/* Guidebook hanya bila sudah diterbitkan dari dasbor; membuka modal panduan IYSA. */}
+            {guidebook && (
+              <button type="button" className="slep btn-outline-primary m-3">
+                <a href={guidebook.url} target="_blank" rel="noreferrer noopener" data-iysa-panduan={SERI}>
+                  Buku Panduan
+                </a>
+              </button>
+            )}
             {/* <button type="button" class="slep btn-outline-primary m-3">
               <a href="/homeindo" rel="noreferrer noopener">
                  Daftar disini!!
