@@ -1,8 +1,22 @@
 import "../css/About.css";
 // import styled from "styled-components";
 import React from "react";
+import { usePendaftaran, formatTanggal } from "../lib/pendaftaran";
 
 const AboutComps = () => {
+  // Judul dan tombol mengikuti togel pendaftaran di dasbor IYSA.
+  const { memuat, identitas, keadaan } = usePendaftaran();
+  const tahun = identitas?.tahun ?? "2027";
+  const label = memuat
+    ? "Memuat…"
+    : keadaan === "buka"
+    ? "Daftar disini!!"
+    : keadaan === "belum"
+    ? `Pendaftaran dibuka ${formatTanggal(identitas?.pendaftaran_buka)}`
+    : keadaan === "tutup"
+    ? "Pendaftaran ditutup"
+    : "Info pendaftaran";
+  const href = keadaan === "buka" || keadaan === "tak_diketahui" ? "/homeindo" : "#!";
   return (
     <section className="her">
       <div className="container">
@@ -11,7 +25,7 @@ const AboutComps = () => {
             <img src="assets/logo/LKTIN.png " className="img-fluid" alt="gambar 1"></img>
           </div>
           <div className="col-md-6 hero-content mt-auto mb-auto text-center">
-            <h1 className="">Dibuka Pendaftaran</h1>
+            <h1 className="">{keadaan === "buka" ? `Dibuka Pendaftaran ${tahun}` : `Segera Hadir ${tahun}`}</h1>
             <h1 className="">SMART RESEARCHER LKTIN</h1>
             <h2 className="">Lomba Karya Tulis Ilmiah Nasional</h2>
             {/* <p className="">
@@ -30,9 +44,9 @@ const AboutComps = () => {
             {/* <a href="/About" className="btn btn-primary">
                 See More
               </a> */}
-            <button type="button" class="slep btn-outline-primary m-3">
-              <a href="#!" rel="noreferrer noopener">
-                 Segera Hadir 2027
+            <button type="button" className="slep btn-outline-primary m-3">
+              <a href={href} rel="noreferrer noopener">
+                 {label}
               </a>
             </button>
             {/* <button type="button" class="slep btn-outline-primary m-3">

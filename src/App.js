@@ -1,7 +1,7 @@
 import "./App.css";
 
 import NavigationComps from "./components/NavigationComps";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Faqs from "./pages/Faqs";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
@@ -18,7 +18,6 @@ import Jenjang25 from "./pages/low/2025/jenjang25";
 import Jenjang26 from "./pages/low/2026/jenjang26";
 
 import Homeindo from "./pages/registration/homeindo"
-import Indonesiaparticipants from "./pages/registration/indo-online";
 import Thankyou from "./pages/registration/thankyou";
 
 function App() {
@@ -37,7 +36,8 @@ function App() {
           <Route path="Jenjang24" element={<Jenjang24 />} />
           <Route path="Jenjang23" element={<Jenjang23 />} />
           <Route path="homeindo" element={<Homeindo />} />
-          <Route path="indonesiaparticipants" element={<Indonesiaparticipants />} />
+          {/* Formulir lama (Google Apps Script) dipensiunkan; pendaftaran lewat formulir dasbor di /homeindo. */}
+          <Route path="indonesiaparticipants" element={<Navigate to="/homeindo" replace />} />
           <Route path="thankyou" element={<Thankyou />} />
         </Routes>
       </Router>

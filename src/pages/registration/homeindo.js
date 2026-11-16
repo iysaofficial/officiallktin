@@ -1,36 +1,22 @@
-import React, { useState, useEffect } from "react";
-import { indonesiaOnlineTerms } from "../data/term";
+import React, { useEffect } from "react";
 import "../../css/registration.css";
-import Navigation from "../../components/NavigationComps";  
+import Navigation from "../../components/NavigationComps";
+import { usePendaftaran, pasangFormulir, formatTanggal } from "../../lib/pendaftaran";
 
+/**
+ * Halaman pendaftaran LKTIN.
+ *
+ * Saat togel di dasbor IYSA dibuka, formulir pendaftaran dasbor (daftar.js)
+ * dipasang di sini — data tim, pembimbing, dan tagihan langsung masuk dasbor.
+ * Saat ditutup, yang tampil keterangan, bukan tombol mati.
+ */
 function HomeIndo() {
-  const [showModal, setShowModal] = useState(false);
-  const [termsAccepted, setTermsAccepted] = useState(false);
-  const [redirectLink, setRedirectLink] = useState("");
-  const [termsContent, setTermsContent] = useState("");
-  
-  const handleOpenModal = (link, terms) => {
-    setRedirectLink(link); // Set link tujuan redirect
-    setTermsContent(terms); // Set isi terms sesuai pilihan
-    setShowModal(true); // Tampilkan modal
-  };
-
-  const handleAccept = () => {
-    if (termsAccepted) {
-      sessionStorage.setItem("termsAccepted", "true"); // Menyimpan status setuju di sessionStorage
-      setShowModal(false);
-      window.location.href = redirectLink;
-    } else {
-      alert("Harap setujui Syarat & Ketentuan untuk melanjutkan.");
-    }
-  };
+  const { memuat, identitas, keadaan } = usePendaftaran();
+  const tahun = identitas?.tahun ?? "";
 
   useEffect(() => {
-    const hasAcceptedTerms = sessionStorage.getItem("termsAccepted");
-    if (hasAcceptedTerms === "true") {
-      setTermsAccepted(true); // Set status sudah diterima
-    }
-  }, []);
+    if (keadaan === "buka") pasangFormulir();
+  }, [keadaan]);
 
   return (
     <>
@@ -39,56 +25,37 @@ function HomeIndo() {
         <div>
           <div className="wrapper">
             <div className="text-center">
-              <h1 className="mx-auto text-sm md:text-lg lg:text-5xl">
-                FORMULIR REGISTRASI
-              </h1>
+              <h1 className="mx-auto text-sm md:text-lg lg:text-5xl">FORMULIR REGISTRASI</h1>
               <h3 className="mx-auto mt-5 mb-2 text-sm md:text-lg lg:text-2xl">
-                Pilih Kategori Kompetisi untuk Registrasi LKTIN 2026
+                {keadaan === "buka"
+                  ? `Pendaftaran LKTIN ${tahun} dibuka`
+                  : keadaan === "tutup"
+                  ? `Pendaftaran LKTIN ${tahun} ditutup`
+                  : `Registrasi LKTIN ${tahun}`}
               </h3>
             </div>
           </div>
           <div className="link-web mx-auto text-center m-5">
-            <button
-              className="btn btn-custom text-center m-5"
-              onClick={() =>
-                handleOpenModal("/indonesiaparticipants", indonesiaOnlineTerms)
-              }
-            >
-              Kompetisi Daring<i className="fa-solid fa-earth-americas"></i>
-            </button>
-          </div>
-        </div>
-      </section>  
-
-      {/* Modal untuk Terms & Conditions */}
-      {showModal && (
-        <div className="modal-overlay">
-          <div className="modal-content">
-            <h2 className="text-4xl">Syarat & Ketentuan</h2>
-            <div className="m-2">{termsContent}</div> {/* Isi dinamis */}
-            <div className="checkbox">
-              <input
-                type="checkbox"
-                id="terms"
-                checked={termsAccepted}
-                onChange={(e) => setTermsAccepted(e.target.checked)}
+            {memuat ? (
+              <p className="m-2">Memuat informasi pendaftaran…</p>
+            ) : keadaan === "buka" ? (
+              <div
+                data-iysa-daftar="lktin"
+                data-iysa-bahasa="id"
+                style={{ maxWidth: "44rem", margin: "0 auto", textAlign: "left" }}
               />
-              <label htmlFor="terms">Saya menyetujui Syarat & Ketentuan</label>
-            </div>
-            <div className="modal-actions">
-              <button
-                className="btn btn-custom"
-                onClick={() => setShowModal(false)}
-              >
-                Kembali
-              </button>
-              <button className="btn btn-custom" onClick={handleAccept}>
-                Terima & Proses
-              </button>
-            </div>
+            ) : (
+              <p className="mx-auto text-center m-2">
+                {keadaan === "belum"
+                  ? `Pendaftaran belum dibuka${identitas?.pendaftaran_buka ? ` — dibuka ${formatTanggal(identitas.pendaftaran_buka)}` : ""}. Silakan kembali lagi nanti.`
+                  : keadaan === "tutup"
+                  ? "Pendaftaran untuk edisi ini sudah ditutup. Ikuti Instagram @iysa_official untuk informasi edisi berikutnya."
+                  : "Informasi pendaftaran belum dapat dimuat. Silakan coba beberapa saat lagi."}
+              </p>
+            )}
           </div>
         </div>
-      )}
+      </section>
     </>
   );
 }
